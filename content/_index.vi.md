@@ -14,6 +14,8 @@ Triển khai và mở rộng ứng dụng LAMP stack trên Amazon Lightsail
 
 Trong các bài lab này, bạn sẽ triển khai một ứng dụng LAMP stack có khả năng chịu lỗi và có thể mở rộng. Để bắt đầu chúng ta sẽ sử dụng front-end PHP trong một Lightsail instance duy nhất dựa trên bản thiết kế Bitnami LAMP. Tiếp theo, bạn sẽ triển khai cơ sở dữ liệu được quản lý Lightsail có tính khả dụng cao và chuyển hướng giao diện người dùng của web để sử dụng nó. Sau đó, bạn sẽ sử dụng tính năng ảnh chụp nhanh của Lightsail để scale out cho ứng dụng web PHP và đặt các máy chủ của bạn sau load balancer.
 
+![Lightsail](/images/intro.jpeg?width=40pc)
+
 #### Nội dung
 
 1. [Chuẩn bị](1-deploy-lab-infra/)
