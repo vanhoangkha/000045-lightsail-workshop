@@ -1,0 +1,169 @@
+[
+{
+	"uri": "/",
+	"title": "Amazon Lightsail Workshop",
+	"tags": [],
+	"description": "",
+	"content": "Amazon Lightsail Workshop - Tối ưu hóa chi phí trên AWS Tổng quan Amazon Lightsail là cách dễ nhất để bắt đầu tiếp cận AWS. Lightsail cung cấp dịch vụ tính toán, lưu trữ và mạng với mức giá cố định thấp. Không dừng lại ở đó, các Lightsail instance của bạn có thể tận dụng sức mạnh của các dịch vụ còn lại mà AWS cung cấp.\nTriển khai và mở rộng ứng dụng LAMP stack trên Amazon Lightsail\nTrong các bài lab này, bạn sẽ triển khai một ứng dụng LAMP stack có khả năng chịu lỗi và có thể mở rộng. Để bắt đầu chúng ta sẽ sử dụng front-end PHP trong một Lightsail instance duy nhất dựa trên bản thiết kế Bitnami LAMP. Tiếp theo, bạn sẽ triển khai cơ sở dữ liệu được quản lý Lightsail có tính khả dụng cao và chuyển hướng giao diện người dùng của web để sử dụng nó. Sau đó, bạn sẽ sử dụng tính năng ảnh chụp nhanh của Lightsail để scale out cho ứng dụng web PHP và đặt các máy chủ của bạn sau load balancer.\nNội dung  Chuẩn bị Kiểm tra ứng dụng  Sử dụng CSDL Lightsail  Sử dụng Lightsail LB Sử dụng RDS Migrate sang EC2 Dọn dẹp tài nguyên  "
+},
+{
+	"uri": "/1-deploy-lab-infra/",
+	"title": "Chuẩn bị",
+	"tags": [],
+	"description": "",
+	"content": "Chuẩn bị Trong bài lab này, bạn sẽ triển khai các thành phần cơ sở hạ tầng sẽ được sử dụng trong các phần tiếp theo.\nCụ thể, bạn sẽ triển khai:\n Tạo Lightsail instance Cơ sở dữ liệu trên Lightsail Một bộ cân bằng tải Lightsail Triển khai CSDL RDS  "
+},
+{
+	"uri": "/6-migrate-ec2/6.1-lightsail-snapshot/",
+	"title": "Export Lightsail snapshot",
+	"tags": [],
+	"description": "",
+	"content": "Tạo Lightsail snapshot và export sang EC2.   Quay trở lại giao diện Lightsail console. Click vào tên Lightsail instance PHP-FE-1 của chúng ta.\n  Click tab Snapshot, sau đó click Create snapshot.\n  Đặt tên snapshot là ec2-export.\n  Click Create để tiến hành tạo snapshot.   Sau khi snapshot được tạo hoàn tất , chúng ta sẽ click vào biểu tượng 3 chấm và click chọn Export to EC2.   Click Yes, continue.\n  Click Acknowledged để bắt đầu quá trình export. Sẽ mất khoảng 15 phút để export từ Lightsail snapshot sang EC2.\n  Sau khi quá trình export hoàn tất , click Open in the Amazon EC2 console. Tiếp theo chúng ta sẽ tiến hành tạo EC2 instance từ bản snapshot đã export.   "
+},
+{
+	"uri": "/5-rdsdb/5.1-enable-vpcpeering/",
+	"title": "Kích hoạt VPC Peering",
+	"tags": [],
+	"description": "",
+	"content": "Kích hoạt VPC Peering Ở bước này, chúng ta sẽ kích hoạt tính năng VPC Peering để tạo kết nối từ Lightsail network tới AWS Default VPC Lightsail network chỉ có khả năng peering với AWS Default VPC.\n Quay trở lại giao diện Lightsail console. Click vào Account ở menu góc trên bên phải.   Click vào Account, sau đó click vào tab Advance.   Click chọn Enable VPC Peering.   Bước tiếp theo chúng ta sẽ cấu hình tường lửa phía Amazon Relational Database Service để cháp nhận két nối tới từ Lightsail instance.\n"
+},
+{
+	"uri": "/1-deploy-lab-infra/1.1-lightsail-instance/",
+	"title": "Tạo Lightsail instance",
+	"tags": [],
+	"description": "",
+	"content": "Bước đầu tiên chúng ta sẽ triển khai một ứng dụng mẫu dựa trên LAMP stack và đặt ứng dụng trong 1 Lightsail instance. Lightsail instance đóng vai trò tương tự một máy chủ ảo ở môi trường truyền thống. Các tài nguyên trong bài lab nên được tạo trong cùng 1 Region, ở đây chúng ta sẽ sử dụng Region Singapore.\n Từ giao diện quản trị của Lightsail click Create Instance.  Click chọn nền tảng Linux/Unix. Dưới mục Blueprint, click chọn LAMP (PHP7).   Kéo màn hình xuống dưới , click chọn +Add Launch Script.   Copy và dán đoạn mã dưới đây vào ô Enter your setup code here.. Các câu lệnh này sẽ được chạy lần đầu tiên khi Lightsail instance khởi chạy.\n  cd /opt/bitnami/apache2/htdocs\rsudo rm -rf *\rsleep 120\rsudo git clone -b loft https://github.com/mikegcoleman/todo-php .\rsudo echo \u0026quot;setting ownership on settings file\u0026quot;\rsudo chown bitnami:daemon connectvalues.php\rsudo chmod 666 connectvalues.php\rsudo echo \u0026quot;adding db password to settings file\u0026quot;\rsudo sed -i.bak \u0026quot;s/\u0026lt;password\u0026gt;/$(cat /home/bitnami/bitnami_application_password)/;\u0026quot; /opt/bitnami/apache2/htdocs/connectvalues.php\rsudo echo \u0026quot;creating tasks database\u0026quot;\rsudo cat /home/bitnami/htdocs/data/init.sql | /opt/bitnami/mysql/bin/mysql -u root -p$(cat /home/bitnami/bitnami_application_password)\rĐoạn mã trên làm các việc sau:\n. Bitnami sẽ có trang web được cài mặc định mà chúng ta sẽ cần xóa đi. Đoạn script bắt đầu bằng việc chuyển đường dẫn tới /opt/bitnami/apache2/htdocs và xóa trang web mặc định.\n. Tiếp theo đoạn script tiến hành copy mã nguồn ứng dụng từ Github repo.\n. Để đảm bảo ứng dụng PHP có thể viết thay đổi vào file cấu hình (connectvalues.php), đoạn script tiến hành thay đổi quyền sở hữu (chown) trên file để đúng với với account chạy Apache web server, đồng thời thực hiện (chmod) để đảm bảo account đó có thể viết vào file.\n. Mỗi Bitnami instance sẽ sinh ra một password duy nhất cho cơ sở dữ liệu (CSDL) MySQL đã được cài đặt sẵn, câu lệnh tiếp theo trong đoạn scripts sẽ mở file cấu hình và cập nhật nó với password được sinh ra này.(Password sẽ nằm ở /home/bitnami/bitnami_application_password )\n. Cuối cùng đoạn script thực hiện 1 tập câu lệnh SQL thông qua công cụ commandline của MySQL để khởi tạo cơ sở dữ liệu local.\n\rKéo màn hình xuống dưới, ở mục Identify your instance, đặt tên instance của chúng ta là PHP-FE-1.  Kéo màn hình xuống dưới, click Create Instance.  Chờ vài phút để Lightsail instance chuyển sang trạng thái running như bên dưới, chúc mừng bạn đã tạo được Lightsail instance đầu tiên.  "
+},
+{
+	"uri": "/4-lightsaillb/4.1-lightsailsnapshot/",
+	"title": "Tạo Lightsail snapshot",
+	"tags": [],
+	"description": "",
+	"content": "Tạo Lightsail snapshot Lightsail giúp việc tạo các instance snapshot của bạn trở nên cực kỳ đơn giản chỉ với một cú nhấp chuột. Các snapshot này có thể được sử dụng để sao lưu và khôi phục các instance, tăng hoặc giảm kích thước instance hoặc tạo instance mới.\n Quay trở lại giao diện Lightsail console. Click vào tên Lightsail instance của chúng ta.  Click tab Snapshot, sau đó click Create snapshot.  Click Create để tiến hành tạo snapshot.  Trạng thái sẽ chuyển sang snapshotting, thời gian tạo snapshot khoảng hơn 5 phút, và bạn cần chờ snapshot hoàn tất trước khi thực hiện bước kế tiếp.\n\r"
+},
+{
+	"uri": "/5-rdsdb/5.2-configure-securitygroup/",
+	"title": "Cấu hình Security Group",
+	"tags": [],
+	"description": "",
+	"content": "Cấu hình Security Group của Amazon Relational Database Service. Ở bước này, chúng ta sẽ cấu hình tường lửa phía Amazon Relational Database Service để chấp nhận két nối tới từ Lightsail instance.\n Quay trở lại giao diện RDS console. ( chúng ta vẫn sử dụng Region Singapore xuyên suốt trong bài lab, nếu bạn sử dụng Region khác, bạn sẽ phải thay đổi lại Region cho phu hợp). Dưới mục Resources, click DB Instances.   Click vào tên database-1 RDS instance mà chúng ta đã tạo ở bước chuẩn bị.   Tại mục Connectivity \u0026amp; security, click vào default security group.   Click Inbound Rules, sau đó click Edit inbound rules.   Click Add rule để tiến hành thêm rule mới cho security group.\n   Từ mục type drop down chọn MySQL/Aurora. Trong ô source , điền 172.26.0.0/16 ( đây là CIDR của Lightsail subnet ). Click Save rules  Vậy là chúng ta đã cấu hình tường lửa (security group) của RDS instance để chấp nhận kết nối từ Lightsail subnet. Tiếp theo chúng ta sẽ cấu hình ứng dụng của chúng ta kết nối tới Amazon RDS endpoint.\n"
+},
+{
+	"uri": "/2-access-app/",
+	"title": "Truy cập ứng dụng",
+	"tags": [],
+	"description": "",
+	"content": "Truy cập ứng dụng Trong bước này, chúng ta sẽ truy cập ứng dụng chúng ta đã cài trong Lightsail instance.\nKiến trúc hiện tại của chúng ta rất đơn giản , chúng ta sẽ kết nối trực tiếp tới Lightsail instance qua internet.\nVề mặt ứng dụng, Front end PHP và cơ sở dữ liệu MySQL của chúng ta hiện tại được cài đặt trên 1 Lightsail instance duy nhất.\n  Quay trở lại giao diện Lightsail console. Chúng ta sẽ thấy địa chỉ IP public của Lightsail instance.   Tiến hành kết nối tới địa chỉ public IP address, chúng ta sẽ truy cập vào ứng dụng todo như dưới đây.\n  Click Add Task và thêm một vài task tùy ý.  "
+},
+{
+	"uri": "/6-migrate-ec2/6.2-ec2-instance/",
+	"title": "Tạo EC2 Instance",
+	"tags": [],
+	"description": "",
+	"content": "Tạo EC2 Instance từ bản snapshot đã export  Sau khi click Open in the Amazon EC2 console, chúng ta sẽ được chuyển hướng tới giao diện quản lý AMI ( Amazon Machine Image). AMI là template để tạo nên các EC2 instance.   Click Launch để tiến hành tạo EC2 instance.   Click Next: Configure Instance Details.   Đảm bảo VPC đang được chọn là VPC Default. Click Review and Launch.   Click Launch để tiến hành tạo instance.\n   Click chọn Create a new keypair. Đặt tên key pair tùy ý. Click Download Key Pair. Click Launch Instances.  \rKey pair được dùng để mã hóa thông tin đăng nhập vào EC2 instance. Trong bài lab này chúng ta không sử dụng tới key pair này.\n\r5. Click View Instances, sau đó click vào instance id. Click vào tab Security sau đó click vào security group.   Bạn hãy lưu thông tin security group này để chuẩn bị cho bước cấu hình security group cho RDS nhé.\n\r Click Edit inbound rules.   Click Add rule.\n   Phần Type , chọn HTTP. Phần Source, chọn Anywhere IPv4. Click Add rule. Phần Type , chọn HTTPS. Click Save rules.  Click Instances.   Click chọn EC2 instance chúng ta vừa chọn. Click Open address hoặc mở địa chỉ public của EC2 instance trên trình duyệt.  Chúng ta sẽ gặp lỗi như thế này, do security group của RDS chưa cho phép EC2 instance của chúng ta kết nối tới. Bước tiếp theo, chúng ta sẽ cấu hình security group của RDS instance, cho phép EC2 instance chúng ta vừa tạo kết nối.  "
+},
+{
+	"uri": "/1-deploy-lab-infra/1.2-lightsail-db/",
+	"title": "Tạo Lightsail DB Instance",
+	"tags": [],
+	"description": "",
+	"content": "Trong bước này chúng ta sẽ tạo một cơ sở dữ liệu (CSDL) / Database (DB) Lightsail. CSDL Lightsail là một dịch vụ CSDL được quản lý bởi AWS, cho phép chúng ta giảm bớt sự phức tạp khi triển khai và quản lý CSDL.\nLightsail sẽ quản lý hạ tầng bên dưới và cả engine của CSDL, chúng ta sẽ chỉ cần quan tâm tới việc tạo, triển khai và lập nên các bảng CSDL chạy trong CSDL Lightsail. Các tài nguyên trong bài lab nên được tạo trong cùng 1 Region, ở đây chúng ta sẽ sử dụng Region Singapore.\n Từ giao diện quản trị của Lightsail click Databases sau đó click Create Database.   Từ menu dropdown của MySQL , chọn version 5.7.xx. Mặc định thì Lightsail sẽ tạo một password phức tạp cho bạn, tuy nhiên password này sẽ chứa các kí tự phức tạp khiến việc copy và paste khó khăn. Trong khuôn khổ bài lab này chúng ta sẽ chỉ định password.\n\r  Click Specify login credentials.\n  Bỏ chọn Create a strong password for me, sau đó đặt password cho CSDL Lightsail của bạn và ghi chú lại. Ở đây chúng ta sẽ đặt password là asg123456.  Kéo màn hình xuống dưới, trong bài lab này chúng ta sẽ triển khai mô hình CSDL mang tính sẵn sàng cao. Click chọn High Availability ở dưới mục Choose your database plan.  Kéo màn hình xuống dưới. Đặt tên cho CSDL của chúng ta là Todo-DB. Sau đó click Create database.  Sẽ mất hơn 10 phút để CSDL Lightsail chuyển sang trạng thái running như bên dưới, chúc mừng bạn đã tạo được CSDL Lightsail đầu tiên. Bạn có thể tiếp tục làm các bước tiếp theo trong lúc đợi CSDL Lightsail được tạo.  "
+},
+{
+	"uri": "/4-lightsaillb/4.2-createlightsail/",
+	"title": "Tạo Lightsail instance",
+	"tags": [],
+	"description": "",
+	"content": "Tạo Lightsail instance từ snapshot  Sau khi snapshot đã được tạo hoàn chỉnh, click vào biểu tượng 3 chấm.  Click Create new instance để tiến hành tạo Lightsail instance từ snapshot.  Click Change zone để thay đổi Availability Zone cho Lightsail instance, chúng ta sẽ tạo 2 Lightsail instance mới ở 2 Availability zone khác với Lightsail instance ban đầu.  Click Zone B.  Kéo màn hình xuống dưới cùng , đặt tên Lightsail instance là PHP-FE-2 và click Create instance.  Click vào Lightsail instance PHP-FE-1 , click vào tab Snapshots và làm tương tự bước 1 tới 5 để tạo thêm instance PHP-FE-3 nhưng ở Zone C nhé. Sau khi tạo xong hãy chắc chắn các instance đều ở trạng thái running trước khi thực hiện bước tiếp theo.   "
+},
+{
+	"uri": "/5-rdsdb/5.3-update-db/",
+	"title": "Cập nhật cáu hình CSDL",
+	"tags": [],
+	"description": "",
+	"content": "Cập nhật cáu hình CSDL của ứng dụng. Ở bước này, chúng ta sẽ xác định endpoint của Amazon Relational Database Service instance chúng ta đã tạo, sau đó cấu hinh ứng dụng để kết nối tới RDS instance.\n Quay trở lại giao diện RDS console. ( chúng ta vẫn sử dụng Region Singapore xuyên suốt trong bài lab, nếu bạn sử dụng Region khác, bạn sẽ phải thay đổi lại Region cho phu hợp). Dưới mục Resources, click DB Instances.   Click vào tên database-1 RDS instance mà chúng ta đã tạo ở bước chuẩn bị.   Tại mục Connectivity \u0026amp; security, lưu lại thông tin endpoint.   Quay trở lại giao diện Lightsail console.\n  Kết nối tới địa chỉ IP public của Lightsail instance để truy cập ứng dụng todo.\n  Click Settings, sau đó cập nhật DB Hostname bằng endpoint của RDS, click Save Settings. Cẩn thận kiểm tra thông tin endpoint khi bạn copy paste vào mục DB Hostname, tránh thừa khoảng trắng cuối cùng.\n\r  Chúng ta sẽ thấy danh sách Task sẽ không có các task chúng ta đã tạo, vì chúng ta đang sử dụng CSDL Amazon RDS mới.\n  Làm tương tự cho cả 3 Lightsail instance.Sau đó chúng ta tạo task trên mỗi Lightsail instance.Kết quả chúng ta sẽ thấy task hiển thị đủ trên ứng dụng todo dù ta đang kết nối trực tiếp tới instance nào.   Vậy là chúng ta đã cấu hình tường lửa (security group) của RDS instance để chấp nhận kết nối từ Lightsail subnet. Tiếp theo chúng ta sẽ cấu hình ứng dụng của chúng ta kết nối tới Amazon RDS endpoint.\nTrong quá trình cập nhật cấu hình DB Hostname cho ứng dụng todo, bạn có thể gặp lỗi dưới đây. Do mỗi lần kết nối vào DB, ứng dụng todo sẽ thử tạo bảng tasks. Bạn có thể bỏ qua lỗi này và thực hiện Refresh ( ấn phím F5 ) để ứng dụng kết nối tiếp tục vào RDS Instance. \\\nSaving settings and testing connection\rConnecting to database.\rThere was an error connecting to the database server:\rCREATE DATABASE IF NOT EXISTS tasks; use tasks; CREATE TABLE tasks ( id INT(11) UNSIGNED AUTO_INCREMENT PRIMARY KEY, summary VARCHAR(30) NOT NULL, details VARCHAR(250) NOT NULL, priority VARCHAR(20) NOT NULL, dueDate TIMESTAMP, isComplete VARCHAR(10) );\rSQLSTATE[42S01]: Base table or view already exists: 1050 Table 'tasks' already exists\r\r"
+},
+{
+	"uri": "/6-migrate-ec2/6.3-update-sg/",
+	"title": "Cập nhật Security group",
+	"tags": [],
+	"description": "",
+	"content": "Cập nhật Security group của Amazon Relational Database Service. Ở bước này, chúng ta sẽ cập nhật cấu hình tường lửa phía Amazon Relational Database Service để chấp nhận két nối tới từ EC2 instance.\n Quay trở lại giao diện RDS console. ( chúng ta vẫn sử dụng Region Singapore xuyên suốt trong bài lab, nếu bạn sử dụng Region khác, bạn sẽ phải thay đổi lại Region cho phu hợp). Dưới mục Resources, click DB Instances.   Click vào tên database-1 RDS instance mà chúng ta đã tạo ở bước chuẩn bị.   Tại mục Connectivity \u0026amp; security, click vào default security group.   Click Inbound Rules, sau đó click Edit inbound rules.\n  Click Add rule để tiến hành thêm rule mới cho security group.\n   Từ mục type drop down chọn MySQL/Aurora. Trong ô source , điền tên của security group cho EC2 bạn đã lưu lại. Click Save rules  Vậy là chúng ta đã cấu hình tường lửa (security group) của RDS instance để chấp nhận kết nối từ EC2 instance.\n"
+},
+{
+	"uri": "/4-lightsaillb/4.3-attachlightsail/",
+	"title": "Gắn instance vào LB",
+	"tags": [],
+	"description": "",
+	"content": "Gắn Lightsail instance vào load balancer Ở bước này, sau khi tạo xong các Lightsail instance, chúng ta sẽ gắn các Lightsail instance vào load balancer Todo-LB mà chúng ta đã tạo.\n Quay trở lại giao diện Lightsail console. Click vào tab Networking sau đó click vào tên load balancer Todo-LB chúng ta đã tạo.  Tại mục Target Instances, click vào dropdown menu , gõ P để hiện ra danh sách các Lightsail instance chúng ta đã tạo, sau đó chọn instance đầu tiên của chúng ta là PHP-FE-1.  Click Attach để tiến hành gắn instance vào load balancer.  Click Attach another và làm tương tự bước 2,3 để gắn 2 instance còn lại.  Sau khi gắn hoàn tất 3 Lightsail instance, chúng ta sẽ đạt trạng thái như dưới đây.  Kéo màn hình lên trên, right click lên DNS Name của Todo-LB load balancer và click Open link in new tab để truy cập tới ứng dụng web của chúng ta.  Thực hiện F5 để refresh trình duyệt vài lần, chúng ta sẽ thấy chúng ta kết nối tới 3 Lightsail instance khác nhau.Chúc mừng bạn đã tăng quy mô ứng dụng web của mình thành công.  "
+},
+{
+	"uri": "/3-lightsaildb/",
+	"title": "Kết nối CSDL Lightsail",
+	"tags": [],
+	"description": "",
+	"content": "Kết nối với Cơ sở dữ liệu Lightsail Hiện tại ứng dụng web của chúng ta không có khả năng mở rộng vì cơ sở dữ liệu và ứng dụng web nằm trên cùng một máy. Sẽ khó để chúng ta có thể nâng cấp hệ thống cơ sở dữ liệu để đáp ứng yêu cầu của ứng dụng.\nĐể cải tiến kiến trúc hiện tại, ứng dụng và cơ sở dữ liệu cần phải được tách biệt. Trong bước này, bạn sẽ điều chỉnh cấu hình cho ứng dụng PHP để trỏ đến Cơ sở dữ liệu Lightsail đã triển khai trước đó.\nKiến trúc của chúng ta khi kết nối thêm CSDL Lightsail sẽ như sau:\nVề mặt ứng dụng, Front end PHP được cài đặt trên Lightsail instance và MySQL chạy trên CSDL Lightsail.\n Quay trở lại giao diện Lightsail console. Click Databases , sau đó click vào biểu tượng 3 dấu chấm.  Click Manage.  Tại trang quản trị Todo-DB , copy lại thông tin endpoint của CSDL Lightsail. Ví dụ thông tin endpoint hiện tại là : ls-689449b809a4e45abdcfb8c46e6c0e67ee990e9d.cqczsvxxcufs.ap-southeast-1.rds.amazonaws.com   Quay lại trang ứng dụng todo của chúng ta. Click Settings.   Tại mục DB Hostname, điền thông tin endpoint của Todo-DB.\n   Tại mục DB Username điền dbmasteruser. Tại mục DB Password điền asg123456. Click Save Settings.    Ứng dụng sẽ tiến hành kiểm tra kết nối tới CSDL Lightsail.   Click Add Task và thêm task tùy ý. Các task tiếp theo bạn tạo sẽ được lưu vào trong CSDL Lightsail.   "
+},
+{
+	"uri": "/1-deploy-lab-infra/1.3-lightsail-lb/",
+	"title": "Tạo Lightsail Load Balancer",
+	"tags": [],
+	"description": "",
+	"content": "Để sẵn sàng cho việc mở rộng qui mô và tăng khả năng chịu lỗi, chúng ta sẻ triển khai phần Front End website của chúng ta sau Lightsail load balancer. Lightsail load balancers có thể đáp ứng cả HTTP và HTTPS traffic trên port 80 và 443. Đối với HTTPS bạn có thể request 1 certificate miễn phí từ dịch vụ AWS Certificate Manager. ( Trong khuôn khổ bài lab này, chúng ta sẽ sử dụng HTTP).\nCác tài nguyên trong bài lab nên được tạo trong cùng 1 Region, ở đây chúng ta sẽ sử dụng Region Singapore.\n Từ giao diện quản trị của Lightsail click Networking sau đó click Create load balancer.  Kéo màn hình xuống dưới. Đặt tên cho load balancer của chúng ta là Todo-LB. Sau đó click Create load balancer.  Chúng ta đã hoàn tất việc tạo Lightsail load balancer, chúng ta sẽ sử dụng Lightsail load balancer ở các bước tiếp theo của bài lab.  "
+},
+{
+	"uri": "/6-migrate-ec2/6.4-app-ec2/",
+	"title": "Kiểm tra ứng dụng ",
+	"tags": [],
+	"description": "",
+	"content": "Kiểm tra ứng dụng trên EC2  Quay trở lại trang ứng dụng trên EC2 đang bị lỗi.   Refresh lại trang (F5) để kiểm tra kết nối.   Chúc mừng bạn đã hoàn tất bài lab, thông qua bài lab này bạn đã nắm bắt được các tính năng cơ bản của Lightsail. Lightsail rất phù hợp cho các workload nhẹ nhàng , qui mô vừa nhỏ tuy nhiên Lightsail cũng cung cấp khả năng kết nối với hệ sinh thái dịch vụ của AWS để đảm bảo đáp ứng các tài nguyên nâng cao như RDS và EC2 cho nhu cầu mở rộng của bạn trong tương lai.\n  Để tránh bị tính phí, các bạn hãy thực hiện bước dọn dẹp tài nguyên nhé.\n\r"
+},
+{
+	"uri": "/4-lightsaillb/",
+	"title": "Mở rộng quy mô ứng dụng",
+	"tags": [],
+	"description": "",
+	"content": "Mở rộng quy mô giao ứng dụng web PHP Bây giờ chúng ta đã tách biệt được giao diện người dùng và cơ sở dữ liệu, hãy xem cách chúng ta có thể tăng khả năng mở rộng và khả năng chịu lỗi cho ứng dụng web của mình.\nTrong phần này, bạn sẽ thực hiện snapshot máy chủ ứng dụng và triển khai hai Lightsail instance mới từ ảnh snapshot. Sau đó bạn sẽ thực hiện gắn 3 Lightsail instance vào Lightsail load balancer bạn đã tạo.\nKhi mọi việc hoàn tất, bạn sẽ có phiên bản thu nhỏ có khả năng chịu lỗi của ứng dụng web hai tầng.\nKiến trúc của chúng ta khi thêm Lightsail instance và sử dụng thêm Lightsail load balancer như sau:\nNội dung  Thực hiện Snapshot Tạo thêm Lightsail instance Gắn Lightsail instance vào load balancer  "
+},
+{
+	"uri": "/1-deploy-lab-infra/1.4-amazon-rds/",
+	"title": "Tạo RDS Instance",
+	"tags": [],
+	"description": "",
+	"content": "Ở bước này chúng ta sẽ tiến hành tạo một CSDL Amazon Relational Database Service (RDS). Amazon RDS là một dịch vụ CSDL cung cấp nhiều tính năng cao cấp hơn so với CSDL Lightsail ( đa dạng engine database, nhiều kích cỡ instance to hơn, tính năng read replicas\u0026hellip;). Khi yêu cầu của ứng dụng thay đổi, chúng ta có thể sẽ cần chuyển CSDL Lightsail sang Amazon RDS. Trong workshop này, chúng ta cũng sẽ thực hiện việc thay đổi CSDL Lightsail hiện tại sang Amazon RDS.\n Chuyển đến trang Amazon RDS, sau đó click Create database. Đường link trên sẽ chuyển đến trang Amazon RDS tại Region Singapore. Nếu bạn dùng Region khác, hãy lựa chọn lại Region cho đúng nhé.\n\r  Click chọn Standard Create, sau đó chọn MySQL.  Kéo màn hình xuống, chọn MySQL version trùng với version của CSDL Lightsail trước đó. (5.7.34) Click chọn Free tier để chạy RDS với cấu hình cơ bản miễn phí.  Kéo màn hình xuống mục Credential settings và nhập dbmasteruser ở mục Master username. Sau đó điền password và confirm password giống với password của CSDL Lightsail. ( asg123456)  Kéo màn hình xuống mục Connectivity, đảm bảo Default VPC đang được chọn. Nếu chúng ta đã xóa Default VPC thì sẽ cần phải tạo lại.  Kéo xuống dưới cùng và click Create database.  Sẽ mất vài phút để hoàn tất quá trình tạo RDS instance. Bạn có thể tiếp tục làm các bước tiếp theo của bài lab.  "
+},
+{
+	"uri": "/5-rdsdb/",
+	"title": "Sử dụng RDS",
+	"tags": [],
+	"description": "",
+	"content": "Sử dụng Amazon Relational Database Service kết hợp với Lightsail Có thể có lúc bạn thấy rằng một trong các dịch vụ của Lightsail không phù hợp với nhu cầu của bạn và bạn sẽ muốn sử dụng một dịch vụ AWS khác thay thế.\nTrong lab này, bạn sẽ thay thế cơ sở dữ liệu Lightsail bằng cơ sở dữ liệu RDS. Bạn sẽ cần bật tính năng VPC Peering trong Lightsail, thêm Lightsail subnet vào RDS Security group, sau đó cập nhật ứng dụng để sử dụng cơ sở dữ liệu RDS.\nKiến trúc của chúng ta khi sử dụng Amazon Relational Database Service thay vì CSDL Lightsail như sau:\nNội dung  Kích hoạt VPC Peering Cấu hình Security Group Cập nhật cấu hình CSDL  "
+},
+{
+	"uri": "/6-migrate-ec2/",
+	"title": "Dịch chuyển sang EC2",
+	"tags": [],
+	"description": "",
+	"content": "Dịch chuyển sang EC2 Khi quy mô ứng dụng và yêu cầu quản lý của bạn tăng lên, chúng ta sẽ chuyển các instance Lightsail sang Amazon Elastic Compute Cloud (EC2). Chúng ta sẽ tạo Lightsail snapshot sau đó export tới dịch vụ EC2. Tiếp theo chúng ta sẽ tạo EC2 Instance ( máy ảo tương tự Lightsail instance).\nNội dung  Export Lightsail Snapshot Tạo EC2 Instance Cập nhật Security group Kiểm tra ứng dụng trên EC2  "
+},
+{
+	"uri": "/7-clean-up/",
+	"title": "Dọn dẹp tài nguyên  ",
+	"tags": [],
+	"description": "",
+	"content": "Hiện tại chúng ta đang sử dụng tài nguyên theo kiến trúc sau\nNgoài ra chúng ta cũng đã tạo thêm 1 EC2 instances.\nChúng ta sẽ tiến hành xóa các tài nguyên theo thứ tự sau\n Truy cập vào Giao diện dịch vụ EC2.   Click Instances. Click chọn Instance EC2. Click Instance state. Click Terminate instance. Click Terminate.  Truy cập vào Giao diện dịch vụ RDS   Click vào Database Click chọn vào RDS DB chúng ta đã tạo. Click Actions. Click Delete.   Bỏ chọn Create final snapshot? Click chọn I acknowledge that upon instance deletion, automated backups, including system snapshots and point-in-time recovery, will no longer be available. Điền delete me để xác nhận. Click Delete.  Truy cập vào giao diện quản trị của Lightsail click Create Instance.   Click vào biểu tượng 3 dấu chấm của instance PHP-FE-1. Click Delete. Click Yes, delete. Làm tương tự cho instance PHP-FE-2 và PHP-FE-3.  Click tab Databases.   Click vào biểu tượng 3 dấu chấm của instance Todo-DB. Click Delete. Click Yes, delete.  Click tab Networking.   Click vào biểu tượng 3 dấu chấm của instance Todo-LB.  Click Delete. Click Yes, delete.    "
+},
+{
+	"uri": "/categories/",
+	"title": "Categories",
+	"tags": [],
+	"description": "",
+	"content": ""
+},
+{
+	"uri": "/tags/",
+	"title": "Tags",
+	"tags": [],
+	"description": "",
+	"content": ""
+}]
