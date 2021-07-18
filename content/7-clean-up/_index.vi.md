@@ -47,14 +47,22 @@ Chúng ta sẽ tiến hành xóa các tài nguyên theo thứ tự sau
 
 ![Lightsail](/images/1-deploy-infra/0084.png?width=90pc)
 
-4. Click tab **Databases**.
+4. Click vào tab **Snapshots**.
+  + Click **Delete multiple**.
+  + Chọn cả 2 snapshot.
+  + Click **Delete**.
+  + Click **Yes**.
+
+![Lightsail](/images/1-deploy-infra/0087.png?width=90pc)
+
+5. Click tab **Databases**.
   + Click vào biểu tượng 3 dấu chấm của instance **Todo-DB**.
   + Click **Delete**.
   + Click **Yes, delete**.
-
+  + Click **Yes**
 ![Lightsail](/images/1-deploy-infra/0085.png?width=90pc)
 
-5. Click tab **Networking**.
+6. Click tab **Networking**.
 + Click vào biểu tượng 3 dấu chấm của instance **Todo-LB**.
   + Click **Delete**.
   + Click **Yes, delete**.

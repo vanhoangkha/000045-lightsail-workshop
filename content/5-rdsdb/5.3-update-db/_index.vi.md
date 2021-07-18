@@ -1,5 +1,5 @@
 +++
-title = "Cập nhật cáu hình CSDL"
+title = "Cập nhật cấu hình CSDL"
 date = 2021
 weight = 3
 chapter = false
@@ -7,7 +7,7 @@ pre = "<b>5.3 </b>"
 +++
 
 
-#### Cập nhật cáu hình CSDL của ứng dụng.
+#### Cập nhật cấu hình CSDL của ứng dụng.
 
 Ở bước này, chúng ta sẽ xác định endpoint của Amazon Relational Database Service instance chúng ta đã tạo, sau đó cấu hinh ứng dụng để kết nối tới RDS instance.
 
