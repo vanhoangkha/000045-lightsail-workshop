@@ -1,5 +1,5 @@
 +++
-title = "Tạo Lightsail instance"
+title = "Create Lightsail instance"
 date = 2021
 weight = 1
 chapter = false
@@ -7,22 +7,28 @@ pre = "<b>1.1 </b>"
 +++
 
 
-Bước đầu tiên chúng ta sẽ triển khai một ứng dụng mẫu dựa trên LAMP stack và đặt ứng dụng trong 1 Lightsail instance.
-Lightsail instance đóng vai trò tương tự một máy chủ ảo ở môi trường truyền thống.
-Các tài nguyên trong bài lab nên được tạo trong cùng 1 Region, ở đây chúng ta sẽ sử dụng Region Singapore.
+As a first step, we will deploy a sample application based on the LAMP stack and place the application in a Lightsail instance.
+The Lightsail instance plays the same role as a virtual server in a traditional environment.
+The resources in the lab should be created in the same Region, here we will use Region Singapore.
 
-1. Từ [giao diện quản trị của Lightsail](https://lightsail.aws.amazon.com/ls/webapp/home/) click **Create Instance**.
+1. From [Lightsail's admin interface](https://lightsail.aws.amazon.com/ls/webapp/home/)
+- Select **Let's get started**
 
-![Lightsail](/images/1-deploy-infra/0001-createinstance.png?width=90pc)
+![Lightsail](/images/1/0001.png?featherlight=false&width=90pc)
 
-2. Click chọn nền tảng **Linux/Unix**. Dưới mục Blueprint, click chọn **LAMP (PHP7)**.
+2. Click **Create Instance**.
 
-![Lightsail](/images/1-deploy-infra/0002-linux-lamp.png?width=90pc)
+![Lightsail](/images/1/0002.png?featherlight=false&width=90pc)
 
-3. Kéo màn hình xuống dưới , click chọn **+Add Launch Script**.
-![Lightsail](/images/1-deploy-infra/0003-addlaunchscript.png?width=90pc)
+3. Click the **Linux/Unix** platform. Under Blueprint, click **LAMP (PHP7)**.
 
-4. Copy và dán đoạn mã dưới đây vào ô **Enter your setup code here.**. Các câu lệnh này sẽ được chạy lần đầu tiên khi Lightsail instance khởi chạy.
+![Lightsail](/images/1/0003.png?featherlight=false&width=90pc)
+
+4. Drag the screen down, and click **+Add Launch Script**.
+
+![Lightsail](/images/1/0004.png?featherlight=false&width=90pc)
+
+5. Copy and paste the code below into the **Enter your setup code here.** box. These commands will be run for the first time when the Lightsail instance is launched.
 ```
 cd /opt/bitnami/apache2/htdocs
 sudo rm -rf *
@@ -36,24 +42,30 @@ sudo sed -i.bak "s/<password>/$(cat /home/bitnami/bitnami_application_password)/
 sudo echo "creating tasks database"
 sudo cat /home/bitnami/htdocs/data/init.sql | /opt/bitnami/mysql/bin/mysql -u root -p$(cat /home/bitnami/bitnami_application_password)
 ```
-![Lightsail](/images/1-deploy-infra/0004-launchscript.png?width=90pc)
+
+![Lightsail](/images/1/0005.png?featherlight=false&width=90pc)
+
 {{%notice tip%}}
-**Đoạn mã trên làm các việc sau:** \
-. Bitnami sẽ có trang web được cài mặc định mà chúng ta sẽ cần xóa đi. Đoạn script bắt đầu bằng việc chuyển đường dẫn tới **/opt/bitnami/apache2/htdocs** và xóa trang web mặc định. \
-. Tiếp theo đoạn script tiến hành copy mã nguồn ứng dụng từ Github repo. \
-. Để đảm bảo ứng dụng PHP có thể viết thay đổi vào file cấu hình (**connectvalues.php**), đoạn script tiến hành thay đổi quyền sở hữu (**chown**) trên file để đúng với với account chạy Apache web server, đồng thời thực hiện (**chmod**) để đảm bảo account đó có thể viết vào file. \
-. Mỗi Bitnami instance sẽ sinh ra một password duy nhất cho cơ sở dữ liệu (CSDL) MySQL đã được cài đặt sẵn, câu lệnh tiếp theo trong đoạn scripts sẽ mở file cấu hình và cập nhật nó với password được sinh ra này.(Password sẽ nằm ở **/home/bitnami/bitnami_application_password** ) \
-. Cuối cùng đoạn script thực hiện 1 tập câu lệnh SQL thông qua công cụ commandline của MySQL để khởi tạo cơ sở dữ liệu local. 
+**The above code does the following:** \
+. Bitnami will have the site installed by default which we will need to remove. The script starts by passing the path to **/opt/bitnami/apache2/htdocs** and removing the default web page. \
+. Next, the script proceeds to copy the application source code from the Github repo. \
+. To ensure that the PHP application can write changes to the configuration file (**connectvalues.php**), the script changes the ownership (**chown**) on the file to match the account running Apache. web server, and also do (**chmod**) to make sure that account can write to the file. \
+. Each Bitnami instance will generate a unique password for the pre-installed MySQL database, the next command in the scripts will open the configuration file and update it with this generated password.(Password) will be located at **/home/bitnami/bitnami_application_password** )\
+. Finally, the script executes a set of SQL statements through the MySQL commandline tool to initialize the local database.
 {{%/notice%}}
 
-5. Kéo màn hình xuống dưới, ở mục **Identify your instance**, đặt tên instance của chúng ta là **PHP-FE-1**.
+6. Scroll down, under **Identify your instance**, name our instance **PHP-FE-1**.
 
-![Lightsail](/images/1-deploy-infra/0005-nameinstance.png?width=90pc)
+![Lightsail](/images/1/0006.png?featherlight=false&width=90pc)
 
-6. Kéo màn hình xuống dưới, click **Create Instance**.
+7. Drag the screen down, click **Create Instance**.
 
-![Lightsail](/images/1-deploy-infra/0006-createinstance.png?width=90pc)
+![Lightsail](/images/1/0007.png?featherlight=false&width=90pc)
 
-7. Chờ vài phút để Lightsail instance chuyển sang trạng thái running như bên dưới, chúc mừng bạn đã tạo được Lightsail instance đầu tiên.
+8. Wait a few minutes for the Lightsail instance to switch to the running state as shown below.
 
-![Lightsail](/images/1-deploy-infra/0007-finish.png?width=90pc)
+![Lightsail](/images/1/0008.png?featherlight=false&width=90pc)
+
+9. Congratulations on creating your first Lightsail instance.
+
+![Lightsail](/images/1/0009.png?featherlight=false&width=90pc)

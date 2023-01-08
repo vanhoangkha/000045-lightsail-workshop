@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="generator" content="Hugo 0.69.0" />
+    <meta name="generator" content="Hugo 0.99.1" />
     <meta name="description" content="">
 <meta name="author" content="journeyoftheaverageguy@gmail.com">
 
@@ -12,21 +12,21 @@
     <title>Tạo EC2 Instance :: Lightsail Workshop</title>
 
     
-    <link href="/css/nucleus.css?1631089984" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1631089984" rel="stylesheet">
-    <link href="/css/hybrid.css?1631089984" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1631089984" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1631089984" rel="stylesheet">
-    <link href="/css/auto-complete.css?1631089984" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1631089984" rel="stylesheet">
-    <link href="/css/theme.css?1631089984" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1631089984" rel="stylesheet">
+    <link href="/css/nucleus.css?1673153713" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1673153713" rel="stylesheet">
+    <link href="/css/hybrid.css?1673153713" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1673153713" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1673153713" rel="stylesheet">
+    <link href="/css/auto-complete.css?1673153713" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1673153713" rel="stylesheet">
+    <link href="/css/theme.css?1673153713" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1673153713" rel="stylesheet">
     
-    <link href="/css/theme-workshop.css?1631089984" rel="stylesheet">
+    <link href="/css/theme-workshop.css?1673153713" rel="stylesheet">
     
     
 
-    <script src="/js/jquery-3.3.1.min.js?1631089984"></script>
+    <script src="/js/jquery-3.3.1.min.js?1673153713"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -57,14 +57,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1631089984"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1631089984"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1673153713"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1673153713"></script>
 <script type="text/javascript">
     
         var baseurl = "\/vi";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1631089984"></script>
+<script type="text/javascript" src="/js/search.js?1673153713"></script>
 
     
   </div>
@@ -588,7 +588,7 @@
   
     
     <li data-nav-id="/vi/6-migrate-ec2/6.2-ec2-instance/" title="Tạo EC2 Instance" class="dd-item 
-        
+        parent
         active
         
         ">
@@ -787,7 +787,7 @@
     <br>
     <br>
         <b> Last Updated </b> <br>
-        <i><font color=orange>07-09-2021</font></i>
+        <i><font color=orange>08-01-2023</font></i>
     </left>
     <left>
         <br>
@@ -890,19 +890,17 @@
 <ul>
 <li>Click <strong>Launch</strong> để tiến hành tạo EC2 instance.</li>
 </ul>
-<p><img src="/images/1-deploy-infra/0068.png?width=90pc" alt="Lightsail"></p>
+<p><img src="/images/14/0001.png?featherlight=false&amp;width=90pc" alt="Lightsail"></p>
+<ol>
+<li>Click <strong>Next: Configure Instance Details</strong>.</li>
+</ol>
+<p><img src="/images/14/0002.png?featherlight=false&amp;width=90pc" alt="Lightsail"></p>
 <ol start="2">
-<li>
-<p>Click <strong>Next: Configure Instance Details</strong>.
-<img src="/images/1-deploy-infra/0069.png?width=90pc" alt="Lightsail"></p>
-</li>
-<li>
-<p>Đảm bảo VPC đang được chọn là VPC Default. Click <strong>Review and Launch</strong>.
-<img src="/images/1-deploy-infra/0070.png?width=90pc" alt="Lightsail"></p>
-</li>
-<li>
-<p>Click <strong>Launch</strong> để tiến hành tạo instance.</p>
-</li>
+<li>Đảm bảo VPC đang được chọn là VPC Default. Click <strong>Review and Launch</strong>.</li>
+</ol>
+<p><img src="/images/14/0003.png?featherlight=false&amp;width=90pc" alt="Lightsail"></p>
+<ol start="3">
+<li>Click <strong>Launch</strong> để tiến hành tạo instance.</li>
 </ol>
 <ul>
 <li>Click chọn <strong>Create a new keypair</strong>.</li>
@@ -910,29 +908,29 @@
 <li>Click <strong>Download Key Pair</strong>.</li>
 <li>Click <strong>Launch Instances</strong>.</li>
 </ul>
-<p><img src="/images/1-deploy-infra/0071.png?width=90pc" alt="Lightsail"></p>
-<p>
+<p><img src="/images/14/0004.png?featherlight=false&amp;width=90pc" alt="Lightsail"></p>
+
 <div class="notices tip" ><p>Key pair được dùng để mã hóa thông tin đăng nhập vào EC2 instance. Trong bài lab này chúng ta không sử dụng tới key pair này.</p>
 </div>
 
-5. Click <strong>View Instances</strong>, sau đó click vào instance id.
-<img src="/images/1-deploy-infra/0072.png?width=90pc" alt="Lightsail"></p>
-<ol start="6">
-<li>Click vào tab <strong>Security</strong> sau đó click vào security group.
-<img src="/images/1-deploy-infra/0073.png?width=90pc" alt="Lightsail"></li>
+<ol>
+<li>Click <strong>View Instances</strong>, sau đó click vào instance id.</li>
 </ol>
+<p><img src="/images/14/0005.png?featherlight=false&amp;width=90pc" alt="Lightsail"></p>
+<ol start="2">
+<li>Click vào tab <strong>Security</strong> sau đó click vào security group.</li>
+</ol>
+<p><img src="/images/14/0006.png?featherlight=false&amp;width=90pc" alt="Lightsail"></p>
 
 <div class="notices tip" ><p>Bạn hãy lưu thông tin security group này để chuẩn bị cho bước cấu hình security group cho RDS nhé.</p>
 </div>
 
-<ol start="7">
-<li>
-<p>Click <strong>Edit inbound rules</strong>.
-<img src="/images/1-deploy-infra/0074.png?width=90pc" alt="Lightsail"></p>
-</li>
-<li>
-<p>Click <strong>Add rule</strong>.</p>
-</li>
+<ol>
+<li>Click <strong>Edit inbound rules</strong>.</li>
+</ol>
+<p><img src="/images/14/0007.png?featherlight=false&amp;width=90pc" alt="Lightsail"></p>
+<ol start="2">
+<li>Click <strong>Add rule</strong>.</li>
 </ol>
 <ul>
 <li>Phần Type , chọn <strong>HTTP</strong>.</li>
@@ -948,11 +946,11 @@
 <li>Click chọn EC2 instance chúng ta vừa chọn.</li>
 <li>Click <strong>Open address</strong> hoặc mở địa chỉ public của EC2 instance trên trình duyệt.</li>
 </ul>
-<p><img src="/images/1-deploy-infra/0076.png?width=90pc" alt="Lightsail"></p>
+<p><img src="/images/14/0008.png?featherlight=false&amp;width=90pc" alt="Lightsail"></p>
 <ol start="10">
 <li>Chúng ta sẽ gặp lỗi như thế này, do security group của RDS chưa cho phép EC2 instance của chúng ta kết nối tới. Bước tiếp theo, chúng ta sẽ cấu hình security group của RDS instance, cho phép EC2 instance chúng ta vừa tạo kết nối.</li>
 </ol>
-<p><img src="/images/1-deploy-infra/0077.png?width=90pc" alt="Lightsail"></p>
+<p><img src="/images/14/0009.png?featherlight=false&amp;width=90pc" alt="Lightsail"></p>
 
 
 
@@ -1365,19 +1363,19 @@
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1631089984"></script>
-    <script src="/js/perfect-scrollbar.min.js?1631089984"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1631089984"></script>
-    <script src="/js/jquery.sticky.js?1631089984"></script>
-    <script src="/js/featherlight.min.js?1631089984"></script>
-    <script src="/js/highlight.pack.js?1631089984"></script>
+    <script src="/js/clipboard.min.js?1673153713"></script>
+    <script src="/js/perfect-scrollbar.min.js?1673153713"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1673153713"></script>
+    <script src="/js/jquery.sticky.js?1673153713"></script>
+    <script src="/js/featherlight.min.js?1673153713"></script>
+    <script src="/js/highlight.pack.js?1673153713"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1631089984"></script>
-    <script src="/js/learn.js?1631089984"></script>
-    <script src="/js/hugo-learn.js?1631089984"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1673153713"></script>
+    <script src="/js/learn.js?1673153713"></script>
+    <script src="/js/hugo-learn.js?1673153713"></script>
 
-    <link href="/mermaid/mermaid.css?1631089984" rel="stylesheet" />
-    <script src="/mermaid/mermaid.js?1631089984"></script>
+    <link href="/mermaid/mermaid.css?1673153713" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1673153713"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

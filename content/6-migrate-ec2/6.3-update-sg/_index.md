@@ -1,5 +1,5 @@
 +++
-title = "Cập nhật Security group"
+title = "Update Security group"
 date = 2021
 weight = 3
 chapter = false
@@ -7,28 +7,28 @@ pre = "<b>6.3 </b>"
 +++
 
 
-#### Cập nhật Security group của Amazon Relational Database Service.
+#### Update the Amazon Relational Database Service Security group.
 
-Ở bước này, chúng ta sẽ cập nhật cấu hình tường lửa phía Amazon Relational Database Service để chấp nhận két nối tới từ EC2 instance.
+In this step, we will update the Amazon Relational Database Service side firewall configuration to accept incoming connections from EC2 instances.
 
 
-1. Quay trở lại giao diện [RDS console](https://ap-southeast-1.console.aws.amazon.com/rds/home?region=ap-southeast-1). ( chúng ta vẫn sử dụng Region Singapore xuyên suốt trong bài lab, nếu bạn sử dụng Region khác, bạn sẽ phải thay đổi lại Region cho phu hợp). Dưới mục **Resources**, click **DB Instances**.
+1. Return to the [RDS console](https://ap-southeast-1.console.aws.amazon.com/rds/home?region=ap-southeast-1) interface. (We still use Region Singapore throughout in the lab, if you use another Region, you will have to change the Region to suit). Under **Resources**, click **DB Instances**.
 
 ![Lightsail](/images/1-deploy-infra/0056-rds.png?width=90pc)
 
-2. Click vào tên **database-1** RDS instance mà chúng ta đã tạo ở bước chuẩn bị.
+2. Click on the name **database-1** RDS instance that we created in the preparation step.
 ![Lightsail](/images/1-deploy-infra/0057-rds.png?width=90pc)
 
-3. Tại mục **Connectivity & security**, click vào **default** security group.
+3. Under **Connectivity & security**, click on **default** security group.
 ![Lightsail](/images/1-deploy-infra/0058-rds.png?width=90pc)
 
-4. Click **Inbound Rules**, sau đó click **Edit inbound rules**.
+4. Click **Inbound Rules**, then click **Edit inbound rules**.
 
-5. Click **Add rule** để tiến hành thêm rule mới cho security group.
-  + Từ mục type drop down chọn **MySQL/Aurora**.
-  + Trong ô source , điền **tên của security group cho EC2 bạn đã lưu lại**.
+5. Click **Add rule** to proceed with adding a new rule for the security group.
+  + From the type drop down, select **MySQL/Aurora**.
+  + In the source box, enter **name of the security group for EC2 you saved**.
   + Click **Save rules**
 
-![Lightsail](/images/1-deploy-infra/0078-rds.png?width=90pc)
+![Lightsail](/images/1-deploy-infra/0078.png?width=90pc)
 
-Vậy là chúng ta đã cấu hình tường lửa (security group) của RDS instance để chấp nhận kết nối từ EC2 instance. 
+So we have configured the firewall (security group) of the RDS instance to accept connections from the EC2 instance.

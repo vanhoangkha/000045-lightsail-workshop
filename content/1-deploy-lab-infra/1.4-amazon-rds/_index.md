@@ -1,43 +1,42 @@
 +++
-title = "Tạo RDS Instance"
+title = "Create RDS Instance"
 date = 2021
 weight = 4
 chapter = false
 pre = "<b>1.4 </b>"
 +++
 
-Ở bước này chúng ta sẽ tiến hành tạo một CSDL Amazon Relational Database Service (RDS). Amazon RDS là một dịch vụ CSDL cung cấp nhiều tính năng cao cấp hơn so với CSDL Lightsail ( đa dạng engine database, nhiều kích cỡ instance to hơn, tính năng read replicas...). Khi yêu cầu của ứng dụng thay đổi, chúng ta có thể sẽ cần chuyển CSDL Lightsail sang Amazon RDS. Trong workshop này, chúng ta cũng sẽ thực hiện việc thay đổi CSDL Lightsail hiện tại sang Amazon RDS.
+In this step, we will proceed to create an Amazon Relational Database Service (RDS) database. Amazon RDS is a database service that offers more advanced features than Lightsail databases (various database engines, larger instance sizes, read replicas...). As application requirements change, we may need to migrate the Lightsail database to Amazon RDS. In this workshop, we will also perform the migration of an existing Lightsail database to Amazon RDS.
 
-1. Chuyển đến trang [Amazon RDS](https://ap-southeast-1.console.aws.amazon.com/rds/home?region=ap-southeast-1#GettingStarted:), sau đó click **Create database**.
+1. Go to [Amazon RDS](https://ap-southeast-1.console.aws.amazon.com/rds/home?region=ap-southeast-1#GettingStarted:) page, then click **Create database**.
 {{%notice tip%}}
-Đường link trên sẽ chuyển đến trang Amazon RDS tại Region Singapore. Nếu bạn dùng Region khác, hãy lựa chọn lại Region cho đúng nhé.
+The above link will redirect to the Amazon RDS page in Region Singapore. If you use another Region, please select the correct Region again.
 {{%/notice%}}
 
-![Lightsail](/images/1-deploy-infra/0018-createrds.png?width=90pc)
+![Lightsail](/images/4/0001.png?featherlight=false&width=90pc)
 
-2. Click chọn **Standard Create**, sau đó chọn **MySQL**.
+2. Click **Standard Create**, then select **MySQL**.
 
-![Lightsail](/images/1-deploy-infra/0019-createdb1.png?width=90pc)
-
-
-3. Kéo màn hình xuống, chọn MySQL version trùng với version của CSDL Lightsail trước đó. (5.7.34)
-Click chọn **Free tier** để chạy RDS với cấu hình cơ bản miễn phí.
-
-![Lightsail](/images/1-deploy-infra/0020-createdb2.png?width=90pc)
-
-4. Kéo màn hình xuống mục **Credential settings** và nhập **dbmasteruser** ở mục **Master username**. Sau đó điền password và confirm password giống với password của CSDL Lightsail. ( **asg123456**)
-
-![Lightsail](/images/1-deploy-infra/0021-dbpass.png?width=90pc)
-
-5. Kéo màn hình xuống mục **Connectivity**, đảm bảo **Default VPC** đang được chọn. Nếu chúng ta đã xóa Default VPC thì sẽ cần phải tạo lại.
-
-![Lightsail](/images/1-deploy-infra/0022-defaultvpc.png?width=90pc)
-
-6. Kéo xuống dưới cùng và click **Create database**.
-
-![Lightsail](/images/1-deploy-infra/0023-createrds.png?width=90pc)
-
-7. Sẽ mất vài phút để hoàn tất quá trình tạo RDS instance. Bạn có thể tiếp tục làm các bước tiếp theo của bài lab.
+![Lightsail](/images/4/0002.png?featherlight=false&width=90pc)
 
 
-![Lightsail](/images/1-deploy-infra/0023-creating.png?width=90pc)
+3. Scroll down, and select the MySQL version that matches the version of the previous Lightsail database. (5.7.34)
+Click **Free tier** to run RDS with basic configuration for free.
+
+![Lightsail](/images/4/0003.png?featherlight=false&width=90pc)
+
+4. Scroll down to **Credential settings** and enter **dbmasteruser** in **Master username**. Then enter the password and confirm the password is the same as the password of the Lightsail database. ( **asg123456**)
+
+![Lightsail](/images/4/0004.png?featherlight=false&width=90pc)
+
+5. Scroll down to **Connectivity**, make sure **Default VPC** is selected. If we deleted the Default VPC, it will need to be recreated.
+
+![Lightsail](/images/4/0005.png?featherlight=false&width=90pc)
+
+6. Scroll to the bottom and click **Create database**.
+
+![Lightsail](/images/4/0006.png?featherlight=false&width=90pc)
+
+7. It will take a few minutes to complete the creation of the RDS instance. You can continue with the next steps of the lab.
+
+![Lightsail](/images/4/0007.png?featherlight=false&width=90pc)

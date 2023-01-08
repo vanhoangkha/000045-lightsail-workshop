@@ -12,12 +12,14 @@ Các tài nguyên trong bài lab nên được tạo trong cùng 1 Region, ở �
 
 1. Từ [giao diện quản trị của Lightsail](https://lightsail.aws.amazon.com/ls/webapp/home/) click **Networking** sau đó click **Create load balancer**.
 
-![Lightsail](/images/1-deploy-infra/0015-createlb.png?width=90pc)
+![Lightsail](/images/3/0001.png?featherlight=false&width=90pc)
 
 2. Kéo màn hình xuống dưới. Đặt tên cho load balancer của chúng ta là **Todo-LB**. Sau đó click **Create load balancer**.
 
-![Lightsail](/images/1-deploy-infra/0016-namelb.png?width=90pc)
+![Lightsail](/images/3/0002.png?featherlight=false&width=90pc)
+
+![Lightsail](/images/3/0003.png?featherlight=false&width=90pc)
 
 3. Chúng ta đã hoàn tất việc tạo Lightsail load balancer, chúng ta sẽ sử dụng Lightsail load balancer ở các bước tiếp theo của bài lab.
 
-![Lightsail](/images/1-deploy-infra/0017-finish.png?width=90pc)
+![Lightsail](/images/3/0004.png?featherlight=false&width=90pc)

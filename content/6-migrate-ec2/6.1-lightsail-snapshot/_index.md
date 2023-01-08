@@ -7,20 +7,38 @@ pre = "<b>6.1 </b>"
 +++
 
 
-#### Tạo Lightsail snapshot và export sang EC2.
+#### Create Lightsail snapshot and export to EC2.
 
 
-1. Quay trở lại giao diện [Lightsail console](https://lightsail.aws.amazon.com/ls/webapp/home/). Click vào tên Lightsail instance **PHP-FE-1** của chúng ta.
+1. Return to the [Lightsail console] interface (https://lightsail.aws.amazon.com/ls/webapp/home/). Click on the name of our Lightsail instance **PHP-FE-1**.
 
-2. Click tab **Snapshot**, sau đó click **Create snapshot**.
-3. Đặt tên snapshot là **ec2-export**.
-4. Click **Create** để tiến hành tạo snapshot.
-![Lightsail](/images/1-deploy-infra/0065.png?width=90pc)
+2. Click the **Snapshot** tab, then click **Create snapshot**.
 
-5. Sau khi snapshot được tạo hoàn tất , chúng ta sẽ click vào biểu tượng 3 chấm và click chọn **Export to EC2**.
-![Lightsail](/images/1-deploy-infra/0066.png?width=90pc)
+![Lightsail](/images/13/0001.png?featherlight=false&width=90pc)
+
+3. Name the snapshot **ec2-export**.
+
+![Lightsail](/images/13/0002.png?featherlight=false&width=90pc)
+
+4. Click **Create** to proceed with creating snapshot.
+
+
+![Lightsail](/images/13/0002.png?featherlight=false&width=90pc)
+
+
+5. Once the snapshot is created, we will click on the 3-dot icon and click **Export to EC2**.
+
+
+![Lightsail](/images/13/0003.png?featherlight=false&width=90pc)
 
 6. Click **Yes, continue**.
-7. Click **Acknowledged** để bắt đầu quá trình export. Sẽ mất khoảng 15 phút để export từ Lightsail snapshot sang EC2.
-8. Sau khi quá trình export hoàn tất , click **Open in the Amazon EC2 console**. Tiếp theo chúng ta sẽ tiến hành tạo EC2 instance từ bản snapshot đã export.
-![Lightsail](/images/1-deploy-infra/0067.png?width=90pc)
+
+![Lightsail](/images/13/0004.png?featherlight=false&width=90pc)
+
+7. Click **Acknowledged** to start the export process. It will take about 15 minutes to export from Lightsail snapshot to EC2.
+
+![Lightsail](/images/13/0005.png?featherlight=false&width=90pc)
+
+8. Once the export is complete, click **Open in the Amazon EC2 console**. Next we will proceed to create an EC2 instance from the exported snapshot.
+
+![Lightsail](/images/13/0006.png?featherlight=false&width=90pc)

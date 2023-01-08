@@ -1,22 +1,22 @@
 +++
-title = "Dọn dẹp tài nguyên  "
+title = "Clean up resources"
 date = 2021
 weight = 7
 chapter = false
 pre = "<b>7. </b>"
 +++
 
-Hiện tại chúng ta đang sử dụng tài nguyên theo kiến trúc sau
+Currently we are using resources according to the following architecture
 
 ![Lightsail](/images/architecture/arc-lightsailrds.png?width=75pc)
 
-Ngoài ra chúng ta cũng đã tạo thêm 1 EC2 instances.
+In addition, we have also created 1 more EC2 instances.
 
-Chúng ta sẽ tiến hành xóa các tài nguyên theo thứ tự sau 
+We will proceed to delete the resources in the following order
 
-1. Truy cập vào [Giao diện dịch vụ EC2](https://ap-southeast-1.console.aws.amazon.com/ec2/v2/home?region=ap-southeast).
+1. Go to [EC2 Service Interface](https://ap-southeast-1.console.aws.amazon.com/ec2/v2/home?region=ap-southeast).
   + Click **Instances**.
-  + Click chọn Instance EC2.
+  + Click on Instance EC2.
   + Click **Instance state**.
   + Click **Terminate instance**.
   + Click **Terminate**.
@@ -24,46 +24,46 @@ Chúng ta sẽ tiến hành xóa các tài nguyên theo thứ tự sau
 ![Lightsail](/images/1-deploy-infra/0081.png?width=90pc)
 
 
-2. Truy cập vào [Giao diện dịch vụ RDS](https://ap-southeast-1.console.aws.amazon.com/rds/home?region=ap-southeast-1)
-  + Click vào **Database**
-  + Click chọn vào RDS DB chúng ta đã tạo.
+2. Go to [RDS Service Interface](https://ap-southeast-1.console.aws.amazon.com/rds/home?region=ap-southeast-1)
+  + Click on **Database**
+  + Click on the RDS DB we created.
   + Click **Actions**.
   + Click **Delete**.
 
 ![Lightsail](/images/1-deploy-infra/0082.png?width=90pc)
 
-  + Bỏ chọn **Create final snapshot?**
-  + Click chọn **I acknowledge that upon instance deletion, automated backups, including system snapshots and point-in-time recovery, will no longer be available.**
-  + Điền **delete me** để xác nhận.
+  + Uncheck **Create final snapshot?**
+  + Click **I acknowledge that upon instance deletion, automated backups, including system snapshots and point-in-time recovery, will no longer be available.**
+  + Enter **delete me** to confirm.
   + Click **Delete**.
 
 ![Lightsail](/images/1-deploy-infra/0083.png?width=90pc)
 
-3. Truy cập vào [giao diện quản trị của Lightsail](https://lightsail.aws.amazon.com/ls/webapp/home/) click **Create Instance**.
-  + Click vào biểu tượng 3 dấu chấm của instance **PHP-FE-1**.
+3. Go to [Lightsail's admin interface](https://lightsail.aws.amazon.com/ls/webapp/home/) click **Create Instance**.
+  + Click on the 3-dot icon of the **PHP-FE-1** instance.
   + Click **Delete**.
   + Click **Yes, delete**.
-  + Làm tương tự cho instance **PHP-FE-2** và **PHP-FE-3**.
+  + Do the same for the **PHP-FE-2** and **PHP-FE-3** instances.
 
 ![Lightsail](/images/1-deploy-infra/0084.png?width=90pc)
 
-4. Click vào tab **Snapshots**.
+4. Click the **Snapshots** tab.
   + Click **Delete multiple**.
-  + Chọn cả 2 snapshot.
+  Select both snapshots.
   + Click **Delete**.
   + Click **Yes**.
 
 ![Lightsail](/images/1-deploy-infra/0087.png?width=90pc)
 
-5. Click tab **Databases**.
-  + Click vào biểu tượng 3 dấu chấm của instance **Todo-DB**.
+5. Click the **Databases** tab.
+  + Click on the 3-dot icon of the **Todo-DB** instance.
   + Click **Delete**.
   + Click **Yes, delete**.
   + Click **Yes**
 ![Lightsail](/images/1-deploy-infra/0085.png?width=90pc)
 
-6. Click tab **Networking**.
-+ Click vào biểu tượng 3 dấu chấm của instance **Todo-LB**.
+6. Click the **Networking** tab.
++ Click on the 3-dot icon of the **Todo-LB** instance.
   + Click **Delete**.
   + Click **Yes, delete**.
 

@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="generator" content="Hugo 0.69.0" />
+    <meta name="generator" content="Hugo 0.99.1" />
     <meta name="description" content="">
 <meta name="author" content="journeyoftheaverageguy@gmail.com">
 
@@ -12,21 +12,21 @@
     <title>Tạo RDS Instance :: Lightsail Workshop</title>
 
     
-    <link href="/css/nucleus.css?1631089984" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1631089984" rel="stylesheet">
-    <link href="/css/hybrid.css?1631089984" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1631089984" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1631089984" rel="stylesheet">
-    <link href="/css/auto-complete.css?1631089984" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1631089984" rel="stylesheet">
-    <link href="/css/theme.css?1631089984" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1631089984" rel="stylesheet">
+    <link href="/css/nucleus.css?1673153713" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1673153713" rel="stylesheet">
+    <link href="/css/hybrid.css?1673153713" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1673153713" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1673153713" rel="stylesheet">
+    <link href="/css/auto-complete.css?1673153713" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1673153713" rel="stylesheet">
+    <link href="/css/theme.css?1673153713" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1673153713" rel="stylesheet">
     
-    <link href="/css/theme-workshop.css?1631089984" rel="stylesheet">
+    <link href="/css/theme-workshop.css?1673153713" rel="stylesheet">
     
     
 
-    <script src="/js/jquery-3.3.1.min.js?1631089984"></script>
+    <script src="/js/jquery-3.3.1.min.js?1673153713"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -57,14 +57,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1631089984"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1631089984"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1673153713"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1673153713"></script>
 <script type="text/javascript">
     
         var baseurl = "\/vi";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1631089984"></script>
+<script type="text/javascript" src="/js/search.js?1673153713"></script>
 
     
   </div>
@@ -198,7 +198,7 @@
   
     
     <li data-nav-id="/vi/1-deploy-lab-infra/1.4-amazon-rds/" title="Tạo RDS Instance" class="dd-item 
-        
+        parent
         active
         
         ">
@@ -787,7 +787,7 @@
     <br>
     <br>
         <b> Last Updated </b> <br>
-        <i><font color=orange>07-09-2021</font></i>
+        <i><font color=orange>08-01-2023</font></i>
     </left>
     <left>
         <br>
@@ -883,32 +883,32 @@
 </div>
 </li>
 </ol>
-<p><img src="/images/1-deploy-infra/0018-createrds.png?width=90pc" alt="Lightsail"></p>
+<p><img src="/images/4/0001.png?featherlight=false&amp;width=90pc" alt="Lightsail"></p>
 <ol start="2">
 <li>Click chọn <strong>Standard Create</strong>, sau đó chọn <strong>MySQL</strong>.</li>
 </ol>
-<p><img src="/images/1-deploy-infra/0019-createdb1.png?width=90pc" alt="Lightsail"></p>
+<p><img src="/images/4/0002.png?featherlight=false&amp;width=90pc" alt="Lightsail"></p>
 <ol start="3">
 <li>Kéo màn hình xuống, chọn MySQL version trùng với version của CSDL Lightsail trước đó. (5.7.34)
 Click chọn <strong>Free tier</strong> để chạy RDS với cấu hình cơ bản miễn phí.</li>
 </ol>
-<p><img src="/images/1-deploy-infra/0020-createdb2.png?width=90pc" alt="Lightsail"></p>
+<p><img src="/images/4/0003.png?featherlight=false&amp;width=90pc" alt="Lightsail"></p>
 <ol start="4">
 <li>Kéo màn hình xuống mục <strong>Credential settings</strong> và nhập <strong>dbmasteruser</strong> ở mục <strong>Master username</strong>. Sau đó điền password và confirm password giống với password của CSDL Lightsail. ( <strong>asg123456</strong>)</li>
 </ol>
-<p><img src="/images/1-deploy-infra/0021-dbpass.png?width=90pc" alt="Lightsail"></p>
+<p><img src="/images/4/0004.png?featherlight=false&amp;width=90pc" alt="Lightsail"></p>
 <ol start="5">
 <li>Kéo màn hình xuống mục <strong>Connectivity</strong>, đảm bảo <strong>Default VPC</strong> đang được chọn. Nếu chúng ta đã xóa Default VPC thì sẽ cần phải tạo lại.</li>
 </ol>
-<p><img src="/images/1-deploy-infra/0022-defaultvpc.png?width=90pc" alt="Lightsail"></p>
+<p><img src="/images/4/0005.png?featherlight=false&amp;width=90pc" alt="Lightsail"></p>
 <ol start="6">
 <li>Kéo xuống dưới cùng và click <strong>Create database</strong>.</li>
 </ol>
-<p><img src="/images/1-deploy-infra/0023-createrds.png?width=90pc" alt="Lightsail"></p>
+<p><img src="/images/4/0006.png?featherlight=false&amp;width=90pc" alt="Lightsail"></p>
 <ol start="7">
 <li>Sẽ mất vài phút để hoàn tất quá trình tạo RDS instance. Bạn có thể tiếp tục làm các bước tiếp theo của bài lab.</li>
 </ol>
-<p><img src="/images/1-deploy-infra/0023-creating.png?width=90pc" alt="Lightsail"></p>
+<p><img src="/images/4/0007.png?featherlight=false&amp;width=90pc" alt="Lightsail"></p>
 
 
 
@@ -1318,19 +1318,19 @@ Click chọn <strong>Free tier</strong> để chạy RDS với cấu hình cơ b
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1631089984"></script>
-    <script src="/js/perfect-scrollbar.min.js?1631089984"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1631089984"></script>
-    <script src="/js/jquery.sticky.js?1631089984"></script>
-    <script src="/js/featherlight.min.js?1631089984"></script>
-    <script src="/js/highlight.pack.js?1631089984"></script>
+    <script src="/js/clipboard.min.js?1673153713"></script>
+    <script src="/js/perfect-scrollbar.min.js?1673153713"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1673153713"></script>
+    <script src="/js/jquery.sticky.js?1673153713"></script>
+    <script src="/js/featherlight.min.js?1673153713"></script>
+    <script src="/js/highlight.pack.js?1673153713"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1631089984"></script>
-    <script src="/js/learn.js?1631089984"></script>
-    <script src="/js/hugo-learn.js?1631089984"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1673153713"></script>
+    <script src="/js/learn.js?1673153713"></script>
+    <script src="/js/hugo-learn.js?1673153713"></script>
 
-    <link href="/mermaid/mermaid.css?1631089984" rel="stylesheet" />
-    <script src="/mermaid/mermaid.js?1631089984"></script>
+    <link href="/mermaid/mermaid.css?1673153713" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1673153713"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

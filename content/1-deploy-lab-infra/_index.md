@@ -1,5 +1,5 @@
 +++
-title = "Chuẩn bị"
+title = "Preparation"
 date = 2021
 weight = 1
 chapter = false
@@ -7,13 +7,13 @@ pre = "<b>1. </b>"
 +++
 
 
-#### Chuẩn bị
+#### Prepare
 
-Trong bài lab này, bạn sẽ triển khai các thành phần cơ sở hạ tầng sẽ được sử dụng trong các phần tiếp theo.
+In this lab, you will implement the infrastructure components that will be used in the following sections.
 
-Cụ thể, bạn sẽ triển khai:
+Specifically, you will implement:
 
-+ [Tạo Lightsail instance](1.1-lightsail-instance/)
-+ [Cơ sở dữ liệu trên Lightsail](1.2-lightsail-db/)
-+ [Một bộ cân bằng tải Lightsail](1.3-lightsail-lb/)
-+ [Triển khai CSDL RDS](1.4-amazon-rds/)
++ [Create Lightsail instance](1.1-lightsail-instance/)
++ [Lightsail-based database](1.2-lightsail-db/)
++ [One Lightsail Load Balancer](1.3-lightsail-lb/)
++ [RDS Database Deployment](1.4-amazon-rds/)

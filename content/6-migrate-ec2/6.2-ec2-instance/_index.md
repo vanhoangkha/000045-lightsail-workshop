@@ -1,5 +1,5 @@
 +++
-title = "Tạo EC2 Instance"
+title = "Create EC2 Instance"
 date = 2021
 weight = 2
 chapter = false
@@ -7,58 +7,65 @@ pre = "<b>6.2 </b>"
 +++
 
 
-#### Tạo EC2 Instance từ bản snapshot đã export
+#### Create EC2 Instance from exported snapshot
 
 
-1. Sau khi click **Open in the Amazon EC2 console**, chúng ta sẽ được chuyển hướng tới giao diện quản lý AMI ( Amazon Machine Image). AMI là template để tạo nên các EC2 instance.
-  + Click **Launch** để tiến hành tạo EC2 instance.
+1. After clicking **Open in the Amazon EC2 console**, we will be redirected to the AMI (Amazon Machine Image) management interface. The AMI is the template for creating EC2 instances.
+  + Click **Launch** to proceed to create EC2 instance.
 
-![Lightsail](/images/1-deploy-infra/0068.png?width=90pc)
-
-2. Click **Next: Configure Instance Details**.
-![Lightsail](/images/1-deploy-infra/0069.png?width=90pc)
+![Lightsail](/images/14/0001.png?featherlight=false&width=90pc)
 
 
-3. Đảm bảo VPC đang được chọn là VPC Default. Click **Review and Launch**.
-![Lightsail](/images/1-deploy-infra/0070.png?width=90pc)
+1. Click **Next: Configure Instance Details**.
 
-4. Click **Launch** để tiến hành tạo instance.
-  + Click chọn **Create a new keypair**.
-  + Đặt tên key pair tùy ý.
+![Lightsail](/images/14/0002.png?featherlight=false&width=90pc)
+
+
+2. Make sure the selected VPC is VPC Default. Click **Review and Launch**.
+
+![Lightsail](/images/14/0003.png?featherlight=false&width=90pc)
+
+3. Click **Launch** to proceed to create the instance.
+  + Click **Create a new keypair**.
+  + Name the key pair arbitrarily.
   + Click **Download Key Pair**.
   + Click **Launch Instances**.
 
-![Lightsail](/images/1-deploy-infra/0071.png?width=90pc)
+![Lightsail](/images/14/0004.png?featherlight=false&width=90pc)
 
 {{%notice tip%}}
-Key pair được dùng để mã hóa thông tin đăng nhập vào EC2 instance. Trong bài lab này chúng ta không sử dụng tới key pair này.
+The key pair is used to encrypt the login information to the EC2 instance. In this lab we do not use this key pair.
 {{%/notice%}}
-5. Click **View Instances**, sau đó click vào instance id.
-![Lightsail](/images/1-deploy-infra/0072.png?width=90pc)
 
-6. Click vào tab **Security** sau đó click vào security group.
-![Lightsail](/images/1-deploy-infra/0073.png?width=90pc)
+1. Click **View Instances**, then click on instance id.
+
+![Lightsail](/images/14/0005.png?featherlight=false&width=90pc)
+
+2. Click on **Security** tab then click on security group.
+
+![Lightsail](/images/14/0006.png?featherlight=false&width=90pc)
 
 {{%notice tip%}}
-Bạn hãy lưu thông tin security group này để chuẩn bị cho bước cấu hình security group cho RDS nhé.
+Please save this security group information to prepare for the step of configuring the security group for RDS.
 {{%/notice%}}
 
-7. Click **Edit inbound rules**.
-![Lightsail](/images/1-deploy-infra/0074.png?width=90pc)
+1. Click **Edit inbound rules**.
 
-8. Click **Add rule**. 
-  + Phần Type , chọn **HTTP**.
-  + Phần Source, chọn **Anywhere IPv4**.
-  + Click **Add rule**. 
-  + Phần Type , chọn **HTTPS**.
+![Lightsail](/images/14/0007.png?featherlight=false&width=90pc)
+
+2. Click **Add rule**.
+  + Type section, select **HTTP**.
+  + In the Source section, select **Anywhere IPv4**.
+  + Click **Add rule**.
+  + Type section, select **HTTPS**.
   + Click **Save rules**.
 
 9. Click **Instances**.
-  + Click chọn EC2 instance chúng ta vừa chọn.
-  + Click **Open address** hoặc mở địa chỉ public của EC2 instance trên trình duyệt.
+  + Click on the EC2 instance we just selected.
+  + Click **Open address** or open the public address of the EC2 instance in the browser.
 
-![Lightsail](/images/1-deploy-infra/0076.png?width=90pc)
+![Lightsail](/images/14/0008.png?featherlight=false&width=90pc)
 
-10. Chúng ta sẽ gặp lỗi như thế này, do security group của RDS chưa cho phép EC2 instance của chúng ta kết nối tới. Bước tiếp theo, chúng ta sẽ cấu hình security group của RDS instance, cho phép EC2 instance chúng ta vừa tạo kết nối.
+10. We will get an error like this, because the RDS security group has not allowed our EC2 instance to connect to. In the next step, we will configure the security group of the RDS instance, allowing the EC2 instance we just created to connect.
 
-![Lightsail](/images/1-deploy-infra/0077.png?width=90pc)
+![Lightsail](/images/14/0009.png?featherlight=false&width=90pc)

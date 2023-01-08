@@ -1,26 +1,26 @@
 +++
-title = "Mở rộng quy mô ứng dụng"
+title = "Scale Application"
 date = 2021
 weight = 4
 chapter = false
 pre = "<b>4. </b>"
 +++
 
-#### Mở rộng quy mô giao ứng dụng web PHP
+#### Scaling PHP Web Application Delivery
 
-Bây giờ chúng ta đã tách biệt được giao diện người dùng và cơ sở dữ liệu, hãy xem cách chúng ta có thể tăng khả năng mở rộng và khả năng chịu lỗi cho ứng dụng web của mình.
+Now that we have separated the user interface and the database, let's see how we can increase the scalability and fault tolerance of our web application.
 
-Trong phần này, bạn sẽ thực hiện snapshot máy chủ ứng dụng  và triển khai hai Lightsail instance mới từ ảnh snapshot. Sau đó bạn sẽ thực hiện gắn 3 Lightsail instance vào Lightsail load balancer bạn đã tạo.
+In this section, you will take an application server snapshot and deploy two new Lightsail instances from the snapshot. You will then perform attaching 3 Lightsail instances to the Lightsail load balancer you created.
 
-Khi mọi việc hoàn tất, bạn sẽ có phiên bản thu nhỏ có khả năng chịu lỗi của ứng dụng web hai tầng.
+When that's done, you'll have a scaled-down, fault-tolerant version of your two-tier web application.
 
 
-Kiến trúc của chúng ta khi thêm Lightsail instance và sử dụng thêm Lightsail load balancer như sau:
+Our architecture when adding Lightsail instance and using additional Lightsail load balancer is as follows:
 
 ![Lightsail](/images/architecture/arc-lightsaillb.png?width=50pc)
 
-#### Nội dung
+#### Content
 
-1. [Thực hiện Snapshot](4.1-lightsailsnapshot/)
-2. [Tạo thêm Lightsail instance](4.2-createlightsail/)
-3. [Gắn Lightsail instance vào load balancer](4.3-attachlightsail/)
+1. [Execute Snapshot](4.1-lightsailsnapshot/)
+2. [Create more Lightsail instance](4.2-createlightsail/)
+3. [Attaching Lightsail instance to load balancer](4.3-attachlightsail/)

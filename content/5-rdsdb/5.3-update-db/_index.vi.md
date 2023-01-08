@@ -13,13 +13,15 @@ pre = "<b>5.3 </b>"
 
 1. Quay trở lại giao diện [RDS console](https://ap-southeast-1.console.aws.amazon.com/rds/home?region=ap-southeast-1). ( chúng ta vẫn sử dụng Region Singapore xuyên suốt trong bài lab, nếu bạn sử dụng Region khác, bạn sẽ phải thay đổi lại Region cho phu hợp). Dưới mục **Resources**, click **DB Instances**.
 
-![Lightsail](/images/1-deploy-infra/0056-rds.png?width=90pc)
+![Lightsail](/images/12/0001.png?featherlight=false&width=90pc)
 
 2. Click vào tên **database-1** RDS instance mà chúng ta đã tạo ở bước chuẩn bị.
-![Lightsail](/images/1-deploy-infra/0057-rds.png?width=90pc)
+
+![Lightsail](/images/12/0002.png?featherlight=false&width=90pc)
 
 3. Tại mục **Connectivity & security**, lưu lại thông tin endpoint.
-![Lightsail](/images/1-deploy-infra/0061.png?width=90pc)
+
+![Lightsail](/images/12/0002.png?featherlight=false&width=90pc)
 
 4. Quay trở lại giao diện [Lightsail console](https://lightsail.aws.amazon.com/ls/webapp/home/).
 
@@ -34,8 +36,7 @@ Cẩn thận kiểm tra thông tin endpoint khi bạn copy paste vào mục **DB
 
 ![Lightsail](/images/1-deploy-infra/0063.png?width=90pc)
 
-8. Làm tương tự cho cả 3 Lightsail instance.Sau đó chúng ta tạo task trên mỗi Lightsail instance.Kết quả chúng ta sẽ thấy task hiển thị đủ trên ứng dụng todo dù ta đang kết nối trực tiếp tới instance nào.
-![Lightsail](/images/1-deploy-infra/0064.png?width=90pc)
+8. Làm tương tự cho cả 2 Lightsail instance.Sau đó chúng ta tạo task trên mỗi Lightsail instance.Kết quả chúng ta sẽ thấy task hiển thị đủ trên ứng dụng todo dù ta đang kết nối trực tiếp tới instance nào.
 
 Vậy là chúng ta đã cấu hình tường lửa (security group) của RDS instance để chấp nhận kết nối từ Lightsail subnet. Tiếp theo chúng ta sẽ cấu hình ứng dụng của chúng ta kết nối tới Amazon RDS endpoint.
 

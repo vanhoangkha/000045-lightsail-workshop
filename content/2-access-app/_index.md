@@ -1,5 +1,5 @@
 +++
-title = "Truy cập ứng dụng"
+title = "App Access"
 date = 2021
 weight = 2
 chapter = false
@@ -7,28 +7,23 @@ pre = "<b>2. </b>"
 +++
 
 
-#### Truy cập ứng dụng
+#### Access the application
 
-Trong bước này, chúng ta sẽ truy cập ứng dụng chúng ta đã cài trong Lightsail instance.
+In this step, we will access the application we installed in the Lightsail instance.
 
-Kiến trúc hiện tại của chúng ta rất đơn giản ,  chúng ta sẽ kết nối trực tiếp tới Lightsail instance qua internet.
+Our current architecture is very simple, we will connect directly to the Lightsail instance over the internet.
 
 ![Lightsail](/images/architecture/arc-lightsailinstance.png?width=50pc)
 
-Về mặt ứng dụng, Front end PHP và cơ sở dữ liệu MySQL của chúng ta hiện tại được cài đặt trên 1 Lightsail instance duy nhất.
+On the application side, our Front end PHP and MySQL database are currently installed on a single Lightsail instance.
 
 ![Lightsail](/images/architecture/arc-lightsailinstanceapp.png?width=45pc)
 
-1. Quay trở lại giao diện [Lightsail console](https://lightsail.aws.amazon.com/ls/webapp/home/).
-Chúng ta sẽ thấy địa chỉ IP public của Lightsail instance.
-![Lightsail](/images/1-deploy-infra/0026-accessapp.png?width=90pc)
+1. Return to the [Lightsail console] interface (https://lightsail.aws.amazon.com/ls/webapp/home/).
+We will see the public IP address of the Lightsail instance.
 
-2. Tiến hành kết nối tới địa chỉ public IP address, chúng ta sẽ truy cập vào ứng dụng todo như dưới đây.
+![Lightsail](/images/4/4.1/0001.png?featherlight=false&width=90pc)
 
-![Lightsail](/images/1-deploy-infra/0027-accessapp.png?width=90pc)
+2. Proceed to connect to the public IP address, we will access the todo application as shown below.
 
-3. Click **Add Task** và thêm một vài task tùy ý.
-
-![Lightsail](/images/1-deploy-infra/0028-accessapp.png?width=90pc)
-
-![Lightsail](/images/1-deploy-infra/0029-accessapp.png?width=90pc)
+![Lightsail](/images/4/4.1/0002.png?featherlight=false&width=90pc)

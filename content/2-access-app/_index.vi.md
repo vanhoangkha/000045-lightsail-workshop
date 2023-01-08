@@ -21,14 +21,9 @@ Về mặt ứng dụng, Front end PHP và cơ sở dữ liệu MySQL của chú
 
 1. Quay trở lại giao diện [Lightsail console](https://lightsail.aws.amazon.com/ls/webapp/home/).
 Chúng ta sẽ thấy địa chỉ IP public của Lightsail instance.
-![Lightsail](/images/1-deploy-infra/0026-accessapp.png?width=90pc)
+
+![Lightsail](/images/4/4.1/0001.png?featherlight=false&width=90pc)
 
 2. Tiến hành kết nối tới địa chỉ public IP address, chúng ta sẽ truy cập vào ứng dụng todo như dưới đây.
 
-![Lightsail](/images/1-deploy-infra/0027-accessapp.png?width=90pc)
-
-3. Click **Add Task** và thêm một vài task tùy ý.
-
-![Lightsail](/images/1-deploy-infra/0028-accessapp.png?width=90pc)
-
-![Lightsail](/images/1-deploy-infra/0029-accessapp.png?width=90pc)
+![Lightsail](/images/4//4.1/0002.png?featherlight=false&width=90pc)

@@ -14,32 +14,36 @@ Các tài nguyên trong bài lab nên được tạo trong cùng 1 Region, ở �
 
 1. Từ [giao diện quản trị của Lightsail](https://lightsail.aws.amazon.com/ls/webapp/home/) click **Databases** sau đó click **Create Database**.
 
-![Lightsail](/images/1-deploy-infra/0008-createdb.png?width=90pc)
+![Lightsail](/images/2/0001.png?featherlight=false&width=90pc)
 
 2. Từ menu dropdown của MySQL , chọn version 5.7.xx.
-![Lightsail](/images/1-deploy-infra/0009-chooseversion.png?width=90pc)
+
+![Lightsail](/images/2/0002.png?featherlight=false&width=90pc)
+
 {{%notice tip%}}
 Mặc định thì Lightsail sẽ tạo một password phức tạp cho bạn, tuy nhiên password này sẽ chứa các kí tự phức tạp khiến việc copy và paste khó khăn. Trong khuôn khổ bài lab này chúng ta sẽ chỉ định password.
 {{%/notice%}}
 
 3. Click **Specify login credentials**.
 
-![Lightsail](/images/1-deploy-infra/0010-specifypass.png?width=90pc)
+![Lightsail](/images/2/0003.png?featherlight=false&width=90pc)
 
 4. Bỏ chọn **Create a strong password for me**, sau đó đặt password cho CSDL Lightsail của bạn và ghi chú lại. Ở đây chúng ta sẽ đặt password là **asg123456**.
 
-![Lightsail](/images/1-deploy-infra/0011-password.png?width=90pc)
+![Lightsail](/images/2/0004.png?featherlight=false&width=90pc)
 
 
 5. Kéo màn hình xuống dưới, trong bài lab này chúng ta sẽ triển khai mô hình CSDL mang tính sẵn sàng cao. Click chọn **High Availability** ở dưới mục **Choose your database plan**.
 
-![Lightsail](/images/1-deploy-infra/0012-dbha.png?width=90pc)
+![Lightsail](/images/2/0005.png?featherlight=false&width=90pc)
 
 6. Kéo màn hình xuống dưới. Đặt tên cho CSDL của chúng ta là **Todo-DB**. Sau đó click **Create database**.
 
-![Lightsail](/images/1-deploy-infra/0013-createdb.png?width=90pc)
+![Lightsail](/images/2/0006.png?featherlight=false&width=90pc)
 
 7. Sẽ mất hơn 10 phút để CSDL Lightsail  chuyển sang trạng thái running như bên dưới, chúc mừng bạn đã tạo được CSDL Lightsail đầu tiên.
 Bạn có thể tiếp tục làm các bước tiếp theo trong lúc đợi CSDL Lightsail được tạo.
 
-![Lightsail](/images/1-deploy-infra/0014-finish.png?width=90pc)
+![Lightsail](/images/2/0007.png?featherlight=false&width=90pc)
+
+

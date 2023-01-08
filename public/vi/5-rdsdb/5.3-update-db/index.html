@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="generator" content="Hugo 0.69.0" />
+    <meta name="generator" content="Hugo 0.99.1" />
     <meta name="description" content="">
 <meta name="author" content="journeyoftheaverageguy@gmail.com">
 
@@ -12,21 +12,21 @@
     <title>Cập nhật cấu hình CSDL :: Lightsail Workshop</title>
 
     
-    <link href="/css/nucleus.css?1631089984" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1631089984" rel="stylesheet">
-    <link href="/css/hybrid.css?1631089984" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1631089984" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1631089984" rel="stylesheet">
-    <link href="/css/auto-complete.css?1631089984" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1631089984" rel="stylesheet">
-    <link href="/css/theme.css?1631089984" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1631089984" rel="stylesheet">
+    <link href="/css/nucleus.css?1673153713" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1673153713" rel="stylesheet">
+    <link href="/css/hybrid.css?1673153713" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1673153713" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1673153713" rel="stylesheet">
+    <link href="/css/auto-complete.css?1673153713" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1673153713" rel="stylesheet">
+    <link href="/css/theme.css?1673153713" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1673153713" rel="stylesheet">
     
-    <link href="/css/theme-workshop.css?1631089984" rel="stylesheet">
+    <link href="/css/theme-workshop.css?1673153713" rel="stylesheet">
     
     
 
-    <script src="/js/jquery-3.3.1.min.js?1631089984"></script>
+    <script src="/js/jquery-3.3.1.min.js?1673153713"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -57,14 +57,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1631089984"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1631089984"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1673153713"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1673153713"></script>
 <script type="text/javascript">
     
         var baseurl = "\/vi";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1631089984"></script>
+<script type="text/javascript" src="/js/search.js?1673153713"></script>
 
     
   </div>
@@ -494,7 +494,7 @@
   
     
     <li data-nav-id="/vi/5-rdsdb/5.3-update-db/" title="Cập nhật cấu hình CSDL" class="dd-item 
-        
+        parent
         active
         
         ">
@@ -787,7 +787,7 @@
     <br>
     <br>
         <b> Last Updated </b> <br>
-        <i><font color=orange>07-09-2021</font></i>
+        <i><font color=orange>08-01-2023</font></i>
     </left>
     <left>
         <br>
@@ -888,16 +888,16 @@
 <ol>
 <li>Quay trở lại giao diện <a href="https://ap-southeast-1.console.aws.amazon.com/rds/home?region=ap-southeast-1">RDS console</a>. ( chúng ta vẫn sử dụng Region Singapore xuyên suốt trong bài lab, nếu bạn sử dụng Region khác, bạn sẽ phải thay đổi lại Region cho phu hợp). Dưới mục <strong>Resources</strong>, click <strong>DB Instances</strong>.</li>
 </ol>
-<p><img src="/images/1-deploy-infra/0056-rds.png?width=90pc" alt="Lightsail"></p>
+<p><img src="/images/12/0001.png?featherlight=false&amp;width=90pc" alt="Lightsail"></p>
 <ol start="2">
-<li>
-<p>Click vào tên <strong>database-1</strong> RDS instance mà chúng ta đã tạo ở bước chuẩn bị.
-<img src="/images/1-deploy-infra/0057-rds.png?width=90pc" alt="Lightsail"></p>
-</li>
-<li>
-<p>Tại mục <strong>Connectivity &amp; security</strong>, lưu lại thông tin endpoint.
-<img src="/images/1-deploy-infra/0061.png?width=90pc" alt="Lightsail"></p>
-</li>
+<li>Click vào tên <strong>database-1</strong> RDS instance mà chúng ta đã tạo ở bước chuẩn bị.</li>
+</ol>
+<p><img src="/images/12/0002.png?featherlight=false&amp;width=90pc" alt="Lightsail"></p>
+<ol start="3">
+<li>Tại mục <strong>Connectivity &amp; security</strong>, lưu lại thông tin endpoint.</li>
+</ol>
+<p><img src="/images/12/0002.png?featherlight=false&amp;width=90pc" alt="Lightsail"></p>
+<ol start="4">
 <li>
 <p>Quay trở lại giao diện <a href="https://lightsail.aws.amazon.com/ls/webapp/home/">Lightsail console</a>.</p>
 </li>
@@ -918,21 +918,20 @@
 </ol>
 <p><img src="/images/1-deploy-infra/0063.png?width=90pc" alt="Lightsail"></p>
 <ol start="8">
-<li>Làm tương tự cho cả 3 Lightsail instance.Sau đó chúng ta tạo task trên mỗi Lightsail instance.Kết quả chúng ta sẽ thấy task hiển thị đủ trên ứng dụng todo dù ta đang kết nối trực tiếp tới instance nào.
-<img src="/images/1-deploy-infra/0064.png?width=90pc" alt="Lightsail"></li>
+<li>Làm tương tự cho cả 2 Lightsail instance.Sau đó chúng ta tạo task trên mỗi Lightsail instance.Kết quả chúng ta sẽ thấy task hiển thị đủ trên ứng dụng todo dù ta đang kết nối trực tiếp tới instance nào.</li>
 </ol>
 <p>Vậy là chúng ta đã cấu hình tường lửa (security group) của RDS instance để chấp nhận kết nối từ Lightsail subnet. Tiếp theo chúng ta sẽ cấu hình ứng dụng của chúng ta kết nối tới Amazon RDS endpoint.</p>
 
 <div class="notices tip" ><p>Trong quá trình cập nhật cấu hình DB Hostname cho ứng dụng todo, bạn có thể gặp lỗi dưới đây. Do mỗi lần kết nối vào DB, ứng dụng todo sẽ thử tạo bảng tasks.
 Bạn có thể bỏ qua lỗi này và thực hiện Refresh ( ấn phím F5 ) để ứng dụng kết nối tiếp tục vào RDS Instance. \</p>
-<pre><code>Saving settings and testing connection
+<pre tabindex="0"><code>Saving settings and testing connection
 
 
 Connecting to database.
 
 There was an error connecting to the database server:
 CREATE DATABASE IF NOT EXISTS tasks; use tasks; CREATE TABLE tasks ( id INT(11) UNSIGNED AUTO_INCREMENT PRIMARY KEY, summary VARCHAR(30) NOT NULL, details VARCHAR(250) NOT NULL, priority VARCHAR(20) NOT NULL, dueDate TIMESTAMP, isComplete VARCHAR(10) );
-SQLSTATE[42S01]: Base table or view already exists: 1050 Table 'tasks' already exists
+SQLSTATE[42S01]: Base table or view already exists: 1050 Table &#39;tasks&#39; already exists
 </code></pre></div>
 
 
@@ -1347,19 +1346,19 @@ SQLSTATE[42S01]: Base table or view already exists: 1050 Table 'tasks' already e
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1631089984"></script>
-    <script src="/js/perfect-scrollbar.min.js?1631089984"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1631089984"></script>
-    <script src="/js/jquery.sticky.js?1631089984"></script>
-    <script src="/js/featherlight.min.js?1631089984"></script>
-    <script src="/js/highlight.pack.js?1631089984"></script>
+    <script src="/js/clipboard.min.js?1673153713"></script>
+    <script src="/js/perfect-scrollbar.min.js?1673153713"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1673153713"></script>
+    <script src="/js/jquery.sticky.js?1673153713"></script>
+    <script src="/js/featherlight.min.js?1673153713"></script>
+    <script src="/js/highlight.pack.js?1673153713"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1631089984"></script>
-    <script src="/js/learn.js?1631089984"></script>
-    <script src="/js/hugo-learn.js?1631089984"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1673153713"></script>
+    <script src="/js/learn.js?1673153713"></script>
+    <script src="/js/hugo-learn.js?1673153713"></script>
 
-    <link href="/mermaid/mermaid.css?1631089984" rel="stylesheet" />
-    <script src="/mermaid/mermaid.js?1631089984"></script>
+    <link href="/mermaid/mermaid.css?1673153713" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1673153713"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

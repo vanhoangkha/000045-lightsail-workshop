@@ -16,13 +16,15 @@ Lightsail network chỉ có khả năng peering với AWS Default VPC.
 
 1. Quay trở lại giao diện [Lightsail console](https://lightsail.aws.amazon.com/ls/webapp/home/). Click vào **Account** ở menu góc trên bên phải.
 
-![Lightsail](/images/1-deploy-infra/0053-rds.png?width=90pc)
+![Lightsail](/images/10/0001.png?featherlight=false&width=90pc)
 
 2. Click vào **Account**, sau đó click vào tab **Advance**.
-![Lightsail](/images/1-deploy-infra/0054-rds.png?width=90pc)
+
+![Lightsail](/images/10/0002.png?featherlight=false&width=90pc)
 
 3. Click chọn **Enable VPC Peering**.
-![Lightsail](/images/1-deploy-infra/0055-rds.png?width=90pc)
+
+![Lightsail](/images/10/0003.png?featherlight=false&width=90pc)
 
 Bước tiếp theo chúng ta sẽ cấu hình tường lửa phía Amazon Relational Database Service để cháp nhận két nối tới từ Lightsail instance.
 

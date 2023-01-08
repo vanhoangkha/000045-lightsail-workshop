@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="generator" content="Hugo 0.69.0" />
+    <meta name="generator" content="Hugo 0.99.1" />
     <meta name="description" content="">
 <meta name="author" content="journeyoftheaverageguy@gmail.com">
 
@@ -12,21 +12,21 @@
     <title>Tạo Lightsail instance :: Lightsail Workshop</title>
 
     
-    <link href="/css/nucleus.css?1631089984" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1631089984" rel="stylesheet">
-    <link href="/css/hybrid.css?1631089984" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1631089984" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1631089984" rel="stylesheet">
-    <link href="/css/auto-complete.css?1631089984" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1631089984" rel="stylesheet">
-    <link href="/css/theme.css?1631089984" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1631089984" rel="stylesheet">
+    <link href="/css/nucleus.css?1673153713" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1673153713" rel="stylesheet">
+    <link href="/css/hybrid.css?1673153713" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1673153713" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1673153713" rel="stylesheet">
+    <link href="/css/auto-complete.css?1673153713" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1673153713" rel="stylesheet">
+    <link href="/css/theme.css?1673153713" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1673153713" rel="stylesheet">
     
-    <link href="/css/theme-workshop.css?1631089984" rel="stylesheet">
+    <link href="/css/theme-workshop.css?1673153713" rel="stylesheet">
     
     
 
-    <script src="/js/jquery-3.3.1.min.js?1631089984"></script>
+    <script src="/js/jquery-3.3.1.min.js?1673153713"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -57,14 +57,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1631089984"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1631089984"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1673153713"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1673153713"></script>
 <script type="text/javascript">
     
         var baseurl = "\/vi";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1631089984"></script>
+<script type="text/javascript" src="/js/search.js?1673153713"></script>
 
     
   </div>
@@ -344,7 +344,7 @@
   
     
     <li data-nav-id="/vi/4-lightsaillb/4.2-createlightsail/" title="Tạo Lightsail instance" class="dd-item 
-        
+        parent
         active
         
         ">
@@ -787,7 +787,7 @@
     <br>
     <br>
         <b> Last Updated </b> <br>
-        <i><font color=orange>07-09-2021</font></i>
+        <i><font color=orange>08-01-2023</font></i>
     </left>
     <left>
         <br>
@@ -887,28 +887,23 @@
 <ol>
 <li>Sau khi snapshot đã được tạo hoàn chỉnh, click vào biểu tượng 3 chấm.</li>
 </ol>
-<p><img src="/images/1-deploy-infra/0040-newinstance.png?width=90pc" alt="Lightsail"></p>
-<ol start="2">
+<p><img src="/images/8/0001.png?featherlight=false&amp;width=90pc" alt="Lightsail"></p>
+<ol>
 <li>Click <strong>Create new instance</strong> để tiến hành tạo Lightsail instance từ snapshot.</li>
 </ol>
-<p><img src="/images/1-deploy-infra/0041-newinstance.png?width=90pc" alt="Lightsail"></p>
-<ol start="3">
+<p><img src="/images/8/0002.png?featherlight=false&amp;width=90pc" alt="Lightsail"></p>
+<ol start="2">
 <li>Click <strong>Change zone</strong> để thay đổi Availability Zone cho Lightsail instance, chúng ta sẽ tạo 2 Lightsail instance mới ở 2 Availability zone khác với Lightsail instance ban đầu.</li>
 </ol>
-<p><img src="/images/1-deploy-infra/0042-newinstance.png?width=90pc" alt="Lightsail"></p>
-<ol start="4">
+<p><img src="/images/8/0003.png?featherlight=false&amp;width=90pc" alt="Lightsail"></p>
+<ol start="3">
 <li>Click <strong>Zone B</strong>.</li>
 </ol>
-<p><img src="/images/1-deploy-infra/0043-newinstance.png?width=90pc" alt="Lightsail"></p>
-<ol start="5">
+<p><img src="/images/8/0004.png?featherlight=false&amp;width=90pc" alt="Lightsail"></p>
+<ol start="4">
 <li>Kéo màn hình xuống dưới cùng , đặt tên Lightsail instance là <strong>PHP-FE-2</strong> và click <strong>Create instance</strong>.</li>
 </ol>
-<p><img src="/images/1-deploy-infra/0044-newinstance.png?width=90pc" alt="Lightsail"></p>
-<ol start="6">
-<li>Click vào Lightsail instance <strong>PHP-FE-1</strong> , click vào tab <strong>Snapshots</strong> và làm tương tự bước 1 tới 5 để tạo thêm instance <strong>PHP-FE-3</strong> nhưng ở <strong>Zone C</strong> nhé.
-Sau khi tạo xong hãy chắc chắn các instance đều ở trạng thái running trước khi thực hiện bước tiếp theo.
-<img src="/images/1-deploy-infra/0045-finish.png?width=90pc" alt="Lightsail"></li>
-</ol>
+<p><img src="/images/8/0005.png?featherlight=false&amp;width=90pc" alt="Lightsail"></p>
 
 
 
@@ -1321,19 +1316,19 @@ Sau khi tạo xong hãy chắc chắn các instance đều ở trạng thái run
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1631089984"></script>
-    <script src="/js/perfect-scrollbar.min.js?1631089984"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1631089984"></script>
-    <script src="/js/jquery.sticky.js?1631089984"></script>
-    <script src="/js/featherlight.min.js?1631089984"></script>
-    <script src="/js/highlight.pack.js?1631089984"></script>
+    <script src="/js/clipboard.min.js?1673153713"></script>
+    <script src="/js/perfect-scrollbar.min.js?1673153713"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1673153713"></script>
+    <script src="/js/jquery.sticky.js?1673153713"></script>
+    <script src="/js/featherlight.min.js?1673153713"></script>
+    <script src="/js/highlight.pack.js?1673153713"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1631089984"></script>
-    <script src="/js/learn.js?1631089984"></script>
-    <script src="/js/hugo-learn.js?1631089984"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1673153713"></script>
+    <script src="/js/learn.js?1673153713"></script>
+    <script src="/js/hugo-learn.js?1673153713"></script>
 
-    <link href="/mermaid/mermaid.css?1631089984" rel="stylesheet" />
-    <script src="/mermaid/mermaid.js?1631089984"></script>
+    <link href="/mermaid/mermaid.css?1673153713" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1673153713"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

@@ -1,5 +1,5 @@
 +++
-title = "Kiểm tra ứng dụng "
+title = "App Test"
 date = 2021
 weight = 4
 chapter = false
@@ -7,19 +7,18 @@ pre = "<b>6.4 </b>"
 +++
 
 
-#### Kiểm tra ứng dụng trên EC2
+#### Application Testing on EC2
 
 
-1. Quay trở lại trang ứng dụng trên EC2 đang bị lỗi.
+1. Return to the application page on the EC2 that is failing.
 
-![Lightsail](/images/1-deploy-infra/0079.png?width=90pc)
+2. Refresh the page (F5) to check the connection.
 
-2. Refresh lại trang (F5) để kiểm tra kết nối.
-![Lightsail](/images/1-deploy-infra/0080.png?width=90pc)
+![Lightsail](/images/9/0008.png?featherlight=false&width=90pc)
 
-3. Chúc mừng bạn đã hoàn tất bài lab, thông qua bài lab này bạn đã nắm bắt được các tính năng cơ bản của Lightsail.
-Lightsail rất phù hợp cho các workload nhẹ nhàng , qui mô vừa nhỏ tuy nhiên Lightsail cũng cung cấp khả năng kết nối với hệ sinh thái dịch vụ của AWS để đảm bảo đáp ứng các tài nguyên nâng cao như RDS và EC2 cho nhu cầu mở rộng của bạn trong tương lai.
+3. Congratulations on completing the lab, through this lab you have grasped the basic features of Lightsail.
+Lightsail is well-suited for small and light workloads, but Lightsail also provides connectivity to AWS's ecosystem of services to ensure that advanced resources like RDS and EC2 are available for open demand. your expansion in the future.
 
 {{%notice tip%}}
-Để tránh bị tính phí, các bạn hãy thực hiện bước dọn dẹp tài nguyên nhé.
+To avoid being charged, please perform the resource cleanup step.
 {{%/notice%}}

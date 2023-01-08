@@ -1,5 +1,5 @@
 +++
-title = "Cấu hình Security Group"
+title = "Security Group Configuration"
 date = 2021
 weight = 2
 chapter = false
@@ -7,30 +7,34 @@ pre = "<b>5.2 </b>"
 +++
 
 
-#### Cấu hình Security Group của Amazon Relational Database Service.
+#### Configure Amazon Relational Database Service's Security Group.
 
-Ở bước này, chúng ta sẽ cấu hình tường lửa phía Amazon Relational Database Service để chấp nhận két nối tới từ Lightsail instance.
+In this step, we will configure the Amazon Relational Database Service side firewall to accept incoming connections from the Lightsail instance.
 
 
-1. Quay trở lại giao diện [RDS console](https://ap-southeast-1.console.aws.amazon.com/rds/home?region=ap-southeast-1). ( chúng ta vẫn sử dụng Region Singapore xuyên suốt trong bài lab, nếu bạn sử dụng Region khác, bạn sẽ phải thay đổi lại Region cho phu hợp). Dưới mục **Resources**, click **DB Instances**.
+1. Return to the [RDS console](https://ap-southeast-1.console.aws.amazon.com/rds/home?region=ap-southeast-1) interface. (We still use Region Singapore throughout in the lab, if you use another Region, you will have to change the Region to suit). Under **Resources**, click **DB Instances**.
 
-![Lightsail](/images/1-deploy-infra/0056-rds.png?width=90pc)
+![Lightsail](/images/11/0001.png?featherlight=false&width=90pc)
 
-2. Click vào tên **database-1** RDS instance mà chúng ta đã tạo ở bước chuẩn bị.
-![Lightsail](/images/1-deploy-infra/0057-rds.png?width=90pc)
+2. Click on the name **database-1** RDS instance that we created in the preparation step.
 
-3. Tại mục **Connectivity & security**, click vào **default** security group.
-![Lightsail](/images/1-deploy-infra/0058-rds.png?width=90pc)
+![Lightsail](/images/11/0002.png?featherlight=false&width=90pc)
 
-4. Click **Inbound Rules**, sau đó click **Edit inbound rules**.
-![Lightsail](/images/1-deploy-infra/0059-rds.png?width=90pc)
+3. Under **Connectivity & security**, click on **default** security group.
 
-5. Click **Add rule** để tiến hành thêm rule mới cho security group.
-  + Từ mục type drop down chọn **MySQL/Aurora**.
-  + Trong ô source , điền **172.26.0.0/16** ( đây là CIDR của Lightsail subnet ).
+![Lightsail](/images/11/0003.png?featherlight=false&width=90pc)
+
+4. Click **Inbound Rules**, then click **Edit inbound rules**.
+
+![Lightsail](/images/11/0004.png?featherlight=false&width=90pc)
+
+5. Click **Add rule** to proceed with adding a new rule for the security group.
+  + From the type drop down, select **MySQL/Aurora**.
+  + In the source box, enter **172.26.0.0/16** (this is the Lightsail subnet CIDR).
   + Click **Save rules**
 
-![Lightsail](/images/1-deploy-infra/0060-rds.png?width=90pc)
+![Lightsail](/images/11/0005.png?featherlight=false&width=90pc)
 
-Vậy là chúng ta đã cấu hình tường lửa (security group) của RDS instance để chấp nhận kết nối từ Lightsail subnet. Tiếp theo chúng ta sẽ cấu hình ứng dụng của chúng ta kết nối tới Amazon RDS endpoint.
+So we have configured the firewall (security group) of the RDS instance to accept connections from the Lightsail subnet. Next we will configure our application to connect to the Amazon RDS endpoint.
 
+![Lightsail](/images/11/0006.png?featherlight=false&width=90pc)

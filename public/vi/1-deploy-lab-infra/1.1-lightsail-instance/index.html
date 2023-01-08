@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="generator" content="Hugo 0.69.0" />
+    <meta name="generator" content="Hugo 0.99.1" />
     <meta name="description" content="">
 <meta name="author" content="journeyoftheaverageguy@gmail.com">
 
@@ -12,21 +12,21 @@
     <title>Tạo Lightsail instance :: Lightsail Workshop</title>
 
     
-    <link href="/css/nucleus.css?1631089984" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1631089984" rel="stylesheet">
-    <link href="/css/hybrid.css?1631089984" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1631089984" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1631089984" rel="stylesheet">
-    <link href="/css/auto-complete.css?1631089984" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1631089984" rel="stylesheet">
-    <link href="/css/theme.css?1631089984" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1631089984" rel="stylesheet">
+    <link href="/css/nucleus.css?1673153713" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1673153713" rel="stylesheet">
+    <link href="/css/hybrid.css?1673153713" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1673153713" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1673153713" rel="stylesheet">
+    <link href="/css/auto-complete.css?1673153713" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1673153713" rel="stylesheet">
+    <link href="/css/theme.css?1673153713" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1673153713" rel="stylesheet">
     
-    <link href="/css/theme-workshop.css?1631089984" rel="stylesheet">
+    <link href="/css/theme-workshop.css?1673153713" rel="stylesheet">
     
     
 
-    <script src="/js/jquery-3.3.1.min.js?1631089984"></script>
+    <script src="/js/jquery-3.3.1.min.js?1673153713"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -57,14 +57,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1631089984"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1631089984"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1673153713"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1673153713"></script>
 <script type="text/javascript">
     
         var baseurl = "\/vi";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1631089984"></script>
+<script type="text/javascript" src="/js/search.js?1673153713"></script>
 
     
   </div>
@@ -114,7 +114,7 @@
   
     
     <li data-nav-id="/vi/1-deploy-lab-infra/1.1-lightsail-instance/" title="Tạo Lightsail instance" class="dd-item 
-        
+        parent
         active
         
         ">
@@ -787,7 +787,7 @@
     <br>
     <br>
         <b> Last Updated </b> <br>
-        <i><font color=orange>07-09-2021</font></i>
+        <i><font color=orange>08-01-2023</font></i>
     </left>
     <left>
         <br>
@@ -879,55 +879,66 @@
 Lightsail instance đóng vai trò tương tự một máy chủ ảo ở môi trường truyền thống.
 Các tài nguyên trong bài lab nên được tạo trong cùng 1 Region, ở đây chúng ta sẽ sử dụng Region Singapore.</p>
 <ol>
-<li>Từ <a href="https://lightsail.aws.amazon.com/ls/webapp/home/">giao diện quản trị của Lightsail</a> click <strong>Create Instance</strong>.</li>
+<li>
+<p>Từ <a href="https://lightsail.aws.amazon.com/ls/webapp/home/">giao diện quản trị của Lightsail</a></p>
+<ul>
+<li>Chọn <strong>Let&rsquo;s get started</strong></li>
+</ul>
+</li>
 </ol>
-<p><img src="/images/1-deploy-infra/0001-createinstance.png?width=90pc" alt="Lightsail"></p>
+<p><img src="/images/1/0001.png?featherlight=false&amp;width=90pc" alt="Lightsail"></p>
 <ol start="2">
+<li>Click <strong>Create Instance</strong>.</li>
+</ol>
+<p><img src="/images/1/0002.png?featherlight=false&amp;width=90pc" alt="Lightsail"></p>
+<ol start="3">
 <li>Click chọn nền tảng <strong>Linux/Unix</strong>. Dưới mục Blueprint, click chọn <strong>LAMP (PHP7)</strong>.</li>
 </ol>
-<p><img src="/images/1-deploy-infra/0002-linux-lamp.png?width=90pc" alt="Lightsail"></p>
-<ol start="3">
-<li>
-<p>Kéo màn hình xuống dưới , click chọn <strong>+Add Launch Script</strong>.
-<img src="/images/1-deploy-infra/0003-addlaunchscript.png?width=90pc" alt="Lightsail"></p>
-</li>
-<li>
-<p>Copy và dán đoạn mã dưới đây vào ô <strong>Enter your setup code here.</strong>. Các câu lệnh này sẽ được chạy lần đầu tiên khi Lightsail instance khởi chạy.</p>
-</li>
+<p><img src="/images/1/0003.png?featherlight=false&amp;width=90pc" alt="Lightsail"></p>
+<ol start="4">
+<li>Kéo màn hình xuống dưới , click chọn <strong>+Add Launch Script</strong>.</li>
 </ol>
-<pre><code>cd /opt/bitnami/apache2/htdocs
+<p><img src="/images/1/0004.png?featherlight=false&amp;width=90pc" alt="Lightsail"></p>
+<ol start="5">
+<li>Copy và dán đoạn mã dưới đây vào ô <strong>Enter your setup code here.</strong>. Các câu lệnh này sẽ được chạy lần đầu tiên khi Lightsail instance khởi chạy.</li>
+</ol>
+<pre tabindex="0"><code>cd /opt/bitnami/apache2/htdocs
 sudo rm -rf *
 sleep 120
 sudo git clone -b loft https://github.com/mikegcoleman/todo-php .
-sudo echo &quot;setting ownership on settings file&quot;
+sudo echo &#34;setting ownership on settings file&#34;
 sudo chown bitnami:daemon connectvalues.php
 sudo chmod 666 connectvalues.php
-sudo echo &quot;adding db password to settings file&quot;
-sudo sed -i.bak &quot;s/&lt;password&gt;/$(cat /home/bitnami/bitnami_application_password)/;&quot; /opt/bitnami/apache2/htdocs/connectvalues.php
-sudo echo &quot;creating tasks database&quot;
+sudo echo &#34;adding db password to settings file&#34;
+sudo sed -i.bak &#34;s/&lt;password&gt;/$(cat /home/bitnami/bitnami_application_password)/;&#34; /opt/bitnami/apache2/htdocs/connectvalues.php
+sudo echo &#34;creating tasks database&#34;
 sudo cat /home/bitnami/htdocs/data/init.sql | /opt/bitnami/mysql/bin/mysql -u root -p$(cat /home/bitnami/bitnami_application_password)
-</code></pre><p><img src="/images/1-deploy-infra/0004-launchscript.png?width=90pc" alt="Lightsail">
+</code></pre><p><img src="/images/1/0005.png?featherlight=false&amp;width=90pc" alt="Lightsail"></p>
 
-<div class="notices tip" ><p><strong>Đoạn mã trên làm các việc sau:</strong><br>
-. Bitnami sẽ có trang web được cài mặc định mà chúng ta sẽ cần xóa đi. Đoạn script bắt đầu bằng việc chuyển đường dẫn tới <strong>/opt/bitnami/apache2/htdocs</strong> và xóa trang web mặc định.<br>
-. Tiếp theo đoạn script tiến hành copy mã nguồn ứng dụng từ Github repo.<br>
-. Để đảm bảo ứng dụng PHP có thể viết thay đổi vào file cấu hình (<strong>connectvalues.php</strong>), đoạn script tiến hành thay đổi quyền sở hữu (<strong>chown</strong>) trên file để đúng với với account chạy Apache web server, đồng thời thực hiện (<strong>chmod</strong>) để đảm bảo account đó có thể viết vào file.<br>
-. Mỗi Bitnami instance sẽ sinh ra một password duy nhất cho cơ sở dữ liệu (CSDL) MySQL đã được cài đặt sẵn, câu lệnh tiếp theo trong đoạn scripts sẽ mở file cấu hình và cập nhật nó với password được sinh ra này.(Password sẽ nằm ở <strong>/home/bitnami/bitnami_application_password</strong> )<br>
+<div class="notices tip" ><p><strong>Đoạn mã trên làm các việc sau:</strong> <br>
+. Bitnami sẽ có trang web được cài mặc định mà chúng ta sẽ cần xóa đi. Đoạn script bắt đầu bằng việc chuyển đường dẫn tới <strong>/opt/bitnami/apache2/htdocs</strong> và xóa trang web mặc định. <br>
+. Tiếp theo đoạn script tiến hành copy mã nguồn ứng dụng từ Github repo. <br>
+. Để đảm bảo ứng dụng PHP có thể viết thay đổi vào file cấu hình (<strong>connectvalues.php</strong>), đoạn script tiến hành thay đổi quyền sở hữu (<strong>chown</strong>) trên file để đúng với với account chạy Apache web server, đồng thời thực hiện (<strong>chmod</strong>) để đảm bảo account đó có thể viết vào file. <br>
+. Mỗi Bitnami instance sẽ sinh ra một password duy nhất cho cơ sở dữ liệu (CSDL) MySQL đã được cài đặt sẵn, câu lệnh tiếp theo trong đoạn scripts sẽ mở file cấu hình và cập nhật nó với password được sinh ra này.(Password sẽ nằm ở <strong>/home/bitnami/bitnami_application_password</strong> ) <br>
 . Cuối cùng đoạn script thực hiện 1 tập câu lệnh SQL thông qua công cụ commandline của MySQL để khởi tạo cơ sở dữ liệu local.</p>
 </div>
-</p>
-<ol start="5">
+
+<ol start="6">
 <li>Kéo màn hình xuống dưới, ở mục <strong>Identify your instance</strong>, đặt tên instance của chúng ta là <strong>PHP-FE-1</strong>.</li>
 </ol>
-<p><img src="/images/1-deploy-infra/0005-nameinstance.png?width=90pc" alt="Lightsail"></p>
-<ol start="6">
+<p><img src="/images/1/0006.png?featherlight=false&amp;width=90pc" alt="Lightsail"></p>
+<ol start="7">
 <li>Kéo màn hình xuống dưới, click <strong>Create Instance</strong>.</li>
 </ol>
-<p><img src="/images/1-deploy-infra/0006-createinstance.png?width=90pc" alt="Lightsail"></p>
-<ol start="7">
-<li>Chờ vài phút để Lightsail instance chuyển sang trạng thái running như bên dưới, chúc mừng bạn đã tạo được Lightsail instance đầu tiên.</li>
+<p><img src="/images/1/0007.png?featherlight=false&amp;width=90pc" alt="Lightsail"></p>
+<ol start="8">
+<li>Chờ vài phút để Lightsail instance chuyển sang trạng thái running như bên dưới.</li>
 </ol>
-<p><img src="/images/1-deploy-infra/0007-finish.png?width=90pc" alt="Lightsail"></p>
+<p><img src="/images/1/0008.png?featherlight=false&amp;width=90pc" alt="Lightsail"></p>
+<ol start="9">
+<li>Chúc mừng bạn đã tạo được Lightsail instance đầu tiên.</li>
+</ol>
+<p><img src="/images/1/0009.png?featherlight=false&amp;width=90pc" alt="Lightsail"></p>
 
 
 
@@ -1334,19 +1345,19 @@ sudo cat /home/bitnami/htdocs/data/init.sql | /opt/bitnami/mysql/bin/mysql -u ro
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1631089984"></script>
-    <script src="/js/perfect-scrollbar.min.js?1631089984"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1631089984"></script>
-    <script src="/js/jquery.sticky.js?1631089984"></script>
-    <script src="/js/featherlight.min.js?1631089984"></script>
-    <script src="/js/highlight.pack.js?1631089984"></script>
+    <script src="/js/clipboard.min.js?1673153713"></script>
+    <script src="/js/perfect-scrollbar.min.js?1673153713"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1673153713"></script>
+    <script src="/js/jquery.sticky.js?1673153713"></script>
+    <script src="/js/featherlight.min.js?1673153713"></script>
+    <script src="/js/highlight.pack.js?1673153713"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1631089984"></script>
-    <script src="/js/learn.js?1631089984"></script>
-    <script src="/js/hugo-learn.js?1631089984"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1673153713"></script>
+    <script src="/js/learn.js?1673153713"></script>
+    <script src="/js/hugo-learn.js?1673153713"></script>
 
-    <link href="/mermaid/mermaid.css?1631089984" rel="stylesheet" />
-    <script src="/mermaid/mermaid.js?1631089984"></script>
+    <link href="/mermaid/mermaid.css?1673153713" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1673153713"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>
