@@ -1,27 +1,24 @@
-+++
-title = "Amazon Lightsail Workshop"
-date = 2021
-weight = 1
-chapter = false
-+++
-# Amazon Lightsail Workshop - Cost Optimization on AWS
+---
+title: "AMAZON LIGHTSAIL WORKSHOP - COST OPTIMIZATION ON AWS"
+date: "`r Sys.Date()`"
+weight: 1
+chapter: false
+---
+
+# AMAZON LIGHTSAIL WORKSHOP - COST OPTIMIZATION ON AWS
+
+In the next 60-120 minutes, this workshop will guide you through building 3 applications on Lightsail: WordPress, PrestaShop, and Akaunting. To provide a comprehensive experience, WordPress and Akaunting will be deployed on Lightsail OS blueprints, while Prestashop will use the Application Blueprint.
+
+After each application is deployed, we will explore how to enhance application security, create backups, scale to larger virtual machines as your business grows, and set up alerts for proactive system monitoring.
 
 #### Overview
 
-Amazon Lightsail is the easiest way to get started with AWS. Lightsail offers compute, storage, and networking services at low, flat rates. Not stopping there, your Lightsail instances can take advantage of the rest of the services that AWS has to offer.
+In this hands-on exercise, we will deploy various open-source applications on Amazon Lightsail and configure Lightsail resources to help you scale your applications as your business expands while safeguarding applications from their default state. Each step will include several best practices to make you an Amazon Lightsail expert.
 
-Deploy and scale LAMP stack applications on Amazon Lightsail
+#### Applications to be Deployed
 
-In these labs, you will deploy a scalable and fault-tolerant LAMP stack application. To start we will use the PHP front-end in a single Lightsail instance based on the Bitnami LAMP blueprint. Next, you'll implement the highly available Lightsail-managed database and redirect the web UI to use it. You will then use Lightsail's snapshot feature to scale out your PHP web application and put your servers behind the load balancer.
+We will deploy WordPress as a blog/website, Prestashop as an e-commerce website, and Akaunting as a financial application. All three applications are open-source products that you can self-host. The lessons in this hands-on exercise also apply to all other applications you may deploy on Lightsail.
 
-![Lightsail](/images/intro.jpeg?width=40pc)
+#### Cost of the Exercise and Cleanup
 
-#### Content
-
-1. [Preparation](1-deploy-lab-infra/)
-2. [App Test ](2-access-app/)
-3. [Using Lightsail Database ](3-lightsaildb/)
-4. [Using Lightsail LB](4-lightsaillb/)
-5. [Using RDS](5-rdsdb/)
-6. [Teleport to EC2](6-migrate-ec2/)
-7. [Resource Cleanup](7-clean-up/)
+This exercise is currently free if you haven't exhausted your 720 hours of free Lightsail resources. If you've already used up your free Lightsail resources, this exercise, with a runtime of 2 hours, will cost approximately $0.085. Even if you don't complete the exercise, you should remove the resources you deploy to avoid incurring charges once the free resources are depleted.

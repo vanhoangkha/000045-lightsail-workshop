@@ -1,27 +1,24 @@
-+++
-title = "Amazon Lightsail Workshop"
-date = 2021
-weight = 1 
-chapter = false
-+++
-# Amazon Lightsail Workshop - Tối ưu hóa chi phí trên AWS
+---
+title : "AMAZON LIGHTSAIL WORKSHOP - COST OPTIMIZATION ON AWS"
+date :  "`r Sys.Date()`" 
+weight : 1 
+chapter : false
+---
+
+# AMAZON LIGHTSAIL WORKSHOP - COST OPTIMIZATION ON AWS
+
+Trong vòng 60-120 phút tới, buổi học này sẽ hướng dẫn bạn xây dựng 3 ứng dụng trên Lightsail: WordPress, PrestaShop và Akaunting. Để mang đến trải nghiệm đầy đủ, WordPress và Akaunting sẽ được triển khai trên Lightsail OS blueprints, trong khi Prestashop sẽ sử dụng Application Blueprint.
+
+Sau khi mỗi ứng dụng được triển khai, chúng ta sẽ điều tra cách bảo mật ứng dụng hơn, tạo sao lưu, chuyển sang các loại máy ảo lớn hơn khi doanh nghiệp của bạn phát triển, và tạo cảnh báo để theo dõi hệ thống một cách chủ động.
+
 
 #### Tổng quan
 
-Amazon Lightsail là cách dễ nhất để bắt đầu tiếp cận AWS. Lightsail cung cấp dịch vụ tính toán, lưu trữ và mạng với mức giá cố định thấp. Không dừng lại ở đó, các  Lightsail instance của bạn có thể tận dụng sức mạnh của các dịch vụ còn lại mà AWS cung cấp. 
+Trong bài thực hành này, chúng ta sẽ triển khai một số ứng dụng mã nguồn mở khác nhau trên Amazon Lightsail và cấu hình tài nguyên Lightsail một cách giúp bạn mở rộng ứng dụng khi doanh nghiệp của bạn phát triển, đồng thời bảo vệ các ứng dụng khỏi trạng thái mặc định của chúng. Mỗi bước sẽ bao gồm một số best practices để giúp bạn trở thành một chuyên gia sử dụng Amazon Lightsail.
 
-Triển khai và mở rộng ứng dụng LAMP stack trên Amazon Lightsail
+#### Các ứng dụng cần triển khai
+Chúng ta sẽ triển khai WordPress như trang blog/website, Prestashop như trang web thương mại điện tử và Akaunting như ứng dụng tài chính. Cả ba ứng dụng này đều là sản phẩm mã nguồn mở mà bạn có thể tự tổ chức. Những bài học trong bài thực hành này cũng áp dụng cho tất cả các ứng dụng khác mà bạn có thể triển khai trên Lightsail.
 
-Trong các bài lab này, bạn sẽ triển khai một ứng dụng LAMP stack có khả năng chịu lỗi và có thể mở rộng. Để bắt đầu chúng ta sẽ sử dụng front-end PHP trong một Lightsail instance duy nhất dựa trên bản thiết kế Bitnami LAMP. Tiếp theo, bạn sẽ triển khai cơ sở dữ liệu được quản lý Lightsail có tính khả dụng cao và chuyển hướng giao diện người dùng của web để sử dụng nó. Sau đó, bạn sẽ sử dụng tính năng ảnh chụp nhanh của Lightsail để scale out cho ứng dụng web PHP và đặt các máy chủ của bạn sau load balancer.
+#### Chi phí của bài thực hành và dọn dẹp
 
-![Lightsail](/images/intro.jpeg?width=40pc)
-
-#### Nội dung
-
-1. [Chuẩn bị](1-deploy-lab-infra/)
-2. [Kiểm tra ứng dụng ](2-access-app/)
-3. [Sử dụng CSDL Lightsail ](3-lightsaildb/) 
-4. [Sử dụng Lightsail LB](4-lightsaillb/)
-5. [Sử dụng RDS](5-rdsdb/)
-6. [Dịch chuyển sang EC2](6-migrate-ec2/)
-7. [Dọn dẹp tài nguyên](7-clean-up/)
+Bài thực hành này thuộc loại miễn phí hiện tại nếu bạn chưa sử dụng hết 720 giờ tài nguyên Lightsail của miễn phí. Nếu bạn đã sử dụng hết tài nguyên Lightsail miễn phí, bài thực hành này, với thời gian chạy là 2 giờ, sẽ tốn khoảng 0,085 đô la. Nếu bạn bắt đầu bài thực hành này, ngay cả khi bạn không hoàn thành bài thực hành, bạn cần gỡ bỏ các tài nguyên bạn triển khai để không bị tính phí sau khi tài nguyên miễn phí đã được sử dụng hết.

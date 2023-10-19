@@ -9,24 +9,24 @@
 
     <link rel="icon" href="/images/favicon.png" type="image/png">
 
-    <title>Amazon Lightsail Workshop :: AMAZON LIGHTSAIL WORKSHOP - TỐI ƯU HÓA CHI PHÍ TRÊN AWS</title>
+    <title>AMAZON LIGHTSAIL WORKSHOP - COST OPTIMIZATION ON AWS :: Bắt đầu với Amazon VPC và AWS VPN Site to Site</title>
 
     
-    <link href="/css/nucleus.css?1680804279" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1680804279" rel="stylesheet">
-    <link href="/css/hybrid.css?1680804279" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1680804279" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1680804279" rel="stylesheet">
-    <link href="/css/auto-complete.css?1680804279" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1680804279" rel="stylesheet">
-    <link href="/css/theme.css?1680804279" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1680804279" rel="stylesheet">
+    <link href="/css/nucleus.css?1697744873" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1697744873" rel="stylesheet">
+    <link href="/css/hybrid.css?1697744873" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1697744873" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1697744873" rel="stylesheet">
+    <link href="/css/auto-complete.css?1697744873" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1697744873" rel="stylesheet">
+    <link href="/css/theme.css?1697744873" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1697744873" rel="stylesheet">
     
-    <link href="/css/theme-workshop.css?1680804279" rel="stylesheet">
+    <link href="/css/theme-workshop.css?1697744873" rel="stylesheet">
     
     
 
-    <script src="/js/jquery-3.3.1.min.js?1680804279"></script>
+    <script src="/js/jquery-3.3.1.min.js?1697744873"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -57,14 +57,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1680804279"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1680804279"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1697744873"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1697744873"></script>
 <script type="text/javascript">
     
         var baseurl = "\/vi";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1680804279"></script>
+<script type="text/javascript" src="/js/search.js?1697744873"></script>
 
     
   </div>
@@ -82,13 +82,39 @@
  
   
     
-    <li data-nav-id="/vi/1-deploy-lab-infra/" title="Chuẩn bị" class="dd-item 
+    <li data-nav-id="/vi/1-database/" title="Triển khai Lightsail Database" class="dd-item 
         
         
         
         ">
-      <a href="/vi/1-deploy-lab-infra/">
-          <b>1. </b>Chuẩn bị
+      <a href="/vi/1-database/">
+           <b> 1. </b> Triển khai Lightsail Database
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+          
+          
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/vi/2-wp-instance/" title="Triển khai Wordpress Instance" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/vi/2-wp-instance/">
+           <b> 2. </b> Triển khai Wordpress Instance
           
             <i class="fas fa-check read-icon"></i>
           
@@ -113,13 +139,13 @@
  
   
     
-    <li data-nav-id="/vi/1-deploy-lab-infra/1.1-lightsail-instance/" title="Tạo Lightsail instance" class="dd-item 
+    <li data-nav-id="/vi/2-wp-instance/2.1-deploy-instance/" title="Triển khai Wordpress Instance" class="dd-item 
         
         
         
         ">
-      <a href="/vi/1-deploy-lab-infra/1.1-lightsail-instance/">
-          <b>1.1 </b>Tạo Lightsail instance
+      <a href="/vi/2-wp-instance/2.1-deploy-instance/">
+           <b> 2.1 </b> Triển khai Wordpress Instance
           
             <i class="fas fa-check read-icon"></i>
           
@@ -141,13 +167,13 @@
  
   
     
-    <li data-nav-id="/vi/1-deploy-lab-infra/1.2-lightsail-db/" title="Tạo Lightsail DB Instance" class="dd-item 
+    <li data-nav-id="/vi/2-wp-instance/2.2-configure/" title="Cấu hình ubuntu" class="dd-item 
         
         
         
         ">
-      <a href="/vi/1-deploy-lab-infra/1.2-lightsail-db/">
-          <b>1.2 </b>Tạo Lightsail DB Instance
+      <a href="/vi/2-wp-instance/2.2-configure/">
+           <b> 2.2 </b> Cấu hình ubuntu
           
             <i class="fas fa-check read-icon"></i>
           
@@ -169,13 +195,13 @@
  
   
     
-    <li data-nav-id="/vi/1-deploy-lab-infra/1.3-lightsail-lb/" title="Tạo Lightsail Load Balancer" class="dd-item 
+    <li data-nav-id="/vi/2-wp-instance/2.3-networking/" title="Cấu hình Networking" class="dd-item 
         
         
         
         ">
-      <a href="/vi/1-deploy-lab-infra/1.3-lightsail-lb/">
-          <b>1.3 </b>Tạo Lightsail Load Balancer
+      <a href="/vi/2-wp-instance/2.3-networking/">
+           <b> 2.3 </b> Cấu hình Networking
           
             <i class="fas fa-check read-icon"></i>
           
@@ -197,13 +223,13 @@
  
   
     
-    <li data-nav-id="/vi/1-deploy-lab-infra/1.4-amazon-rds/" title="Tạo RDS Instance" class="dd-item 
+    <li data-nav-id="/vi/2-wp-instance/2.4-wp/" title="Cấu hình WordPress" class="dd-item 
         
         
         
         ">
-      <a href="/vi/1-deploy-lab-infra/1.4-amazon-rds/">
-          <b>1.4 </b>Tạo RDS Instance
+      <a href="/vi/2-wp-instance/2.4-wp/">
+           <b> 2.4 </b> Cấu hình WordPress
           
             <i class="fas fa-check read-icon"></i>
           
@@ -232,65 +258,13 @@
  
   
     
-    <li data-nav-id="/vi/2-access-app/" title="Truy cập ứng dụng" class="dd-item 
+    <li data-nav-id="/vi/3-e-commerce-instance/" title="Triển khai Prestashop E-Commerce Instance" class="dd-item 
         
         
         
         ">
-      <a href="/vi/2-access-app/">
-          <b>2. </b>Truy cập ứng dụng
-          
-            <i class="fas fa-check read-icon"></i>
-          
-      </a>
-      
-              
-    </li>
-  
- 
-
-          
-          
-
-
-
-
- 
-  
-    
-    <li data-nav-id="/vi/3-lightsaildb/" title="Kết nối CSDL Lightsail" class="dd-item 
-        
-        
-        
-        ">
-      <a href="/vi/3-lightsaildb/">
-          <b>3. </b>Kết nối CSDL Lightsail
-          
-            <i class="fas fa-check read-icon"></i>
-          
-      </a>
-      
-              
-    </li>
-  
- 
-
-          
-          
-
-
-
-
- 
-  
-    
-    <li data-nav-id="/vi/4-lightsaillb/" title="Mở rộng quy mô ứng dụng" class="dd-item 
-        
-        
-        
-        ">
-      <a href="/vi/4-lightsaillb/">
-          <b>4. </b>Mở rộng quy mô ứng dụng
+      <a href="/vi/3-e-commerce-instance/">
+           <b> 3. </b> Triển khai Prestashop E-Commerce Instance
           
             <i class="fas fa-check read-icon"></i>
           
@@ -315,13 +289,13 @@
  
   
     
-    <li data-nav-id="/vi/4-lightsaillb/4.1-lightsailsnapshot/" title="Tạo Lightsail snapshot" class="dd-item 
+    <li data-nav-id="/vi/3-e-commerce-instance/3.1-deploy/" title="Triển khai Wordpress Instance" class="dd-item 
         
         
         
         ">
-      <a href="/vi/4-lightsaillb/4.1-lightsailsnapshot/">
-          <b>4.1 </b>Tạo Lightsail snapshot
+      <a href="/vi/3-e-commerce-instance/3.1-deploy/">
+           <b> 3.1 </b> Triển khai Wordpress Instance
           
             <i class="fas fa-check read-icon"></i>
           
@@ -343,13 +317,13 @@
  
   
     
-    <li data-nav-id="/vi/4-lightsaillb/4.2-createlightsail/" title="Tạo Lightsail instance" class="dd-item 
+    <li data-nav-id="/vi/3-e-commerce-instance/3.2-networking/" title="Cấu hình Networking" class="dd-item 
         
         
         
         ">
-      <a href="/vi/4-lightsaillb/4.2-createlightsail/">
-          <b>4.2 </b>Tạo Lightsail instance
+      <a href="/vi/3-e-commerce-instance/3.2-networking/">
+           <b> 3.2 </b> Cấu hình Networking
           
             <i class="fas fa-check read-icon"></i>
           
@@ -371,13 +345,13 @@
  
   
     
-    <li data-nav-id="/vi/4-lightsaillb/4.3-attachlightsail/" title="Gắn instance vào LB" class="dd-item 
+    <li data-nav-id="/vi/3-e-commerce-instance/3.3-configure/" title="Triển khai Wordpress" class="dd-item 
         
         
         
         ">
-      <a href="/vi/4-lightsaillb/4.3-attachlightsail/">
-          <b>4.3 </b>Gắn instance vào LB
+      <a href="/vi/3-e-commerce-instance/3.3-configure/">
+           <b> 3.3 </b> Triển khai Wordpress
           
             <i class="fas fa-check read-icon"></i>
           
@@ -406,13 +380,13 @@
  
   
     
-    <li data-nav-id="/vi/5-rdsdb/" title="Sử dụng RDS" class="dd-item 
+    <li data-nav-id="/vi/4-akaunting-instance/" title="Triển khai Akaunting Instance" class="dd-item 
         
         
         
         ">
-      <a href="/vi/5-rdsdb/">
-          <b>5. </b>Sử dụng RDS
+      <a href="/vi/4-akaunting-instance/">
+           <b> 4. </b> Triển khai Akaunting Instance
           
             <i class="fas fa-check read-icon"></i>
           
@@ -437,13 +411,13 @@
  
   
     
-    <li data-nav-id="/vi/5-rdsdb/5.1-enable-vpcpeering/" title="Kích hoạt VPC Peering" class="dd-item 
+    <li data-nav-id="/vi/4-akaunting-instance/4.1-deploy-instance/" title="Triển khai Prestashop E-Commerce Instance" class="dd-item 
         
         
         
         ">
-      <a href="/vi/5-rdsdb/5.1-enable-vpcpeering/">
-          <b>5.1 </b>Kích hoạt VPC Peering
+      <a href="/vi/4-akaunting-instance/4.1-deploy-instance/">
+           <b> 4.1 </b> Triển khai Prestashop E-Commerce Instance
           
             <i class="fas fa-check read-icon"></i>
           
@@ -465,13 +439,13 @@
  
   
     
-    <li data-nav-id="/vi/5-rdsdb/5.2-configure-securitygroup/" title="Cấu hình Security Group" class="dd-item 
+    <li data-nav-id="/vi/4-akaunting-instance/4.2-networking/" title="Cấu hình Networking" class="dd-item 
         
         
         
         ">
-      <a href="/vi/5-rdsdb/5.2-configure-securitygroup/">
-          <b>5.2 </b>Cấu hình Security Group
+      <a href="/vi/4-akaunting-instance/4.2-networking/">
+           <b> 4.2 </b> Cấu hình Networking
           
             <i class="fas fa-check read-icon"></i>
           
@@ -493,13 +467,13 @@
  
   
     
-    <li data-nav-id="/vi/5-rdsdb/5.3-update-db/" title="Cập nhật cấu hình CSDL" class="dd-item 
+    <li data-nav-id="/vi/4-akaunting-instance/4.3-configure/" title="Triển khai Prestashop E-Commerce Instance" class="dd-item 
         
         
         
         ">
-      <a href="/vi/5-rdsdb/5.3-update-db/">
-          <b>5.3 </b>Cập nhật cấu hình CSDL
+      <a href="/vi/4-akaunting-instance/4.3-configure/">
+           <b> 4.3 </b> Triển khai Prestashop E-Commerce Instance
           
             <i class="fas fa-check read-icon"></i>
           
@@ -528,142 +502,18 @@
  
   
     
-    <li data-nav-id="/vi/6-migrate-ec2/" title="Dịch chuyển sang EC2" class="dd-item 
+    <li data-nav-id="/vi/5-secure-the-applications/" title="Bảo mật ứng dụng" class="dd-item 
         
         
         
         ">
-      <a href="/vi/6-migrate-ec2/">
-          <b>6. </b>Dịch chuyển sang EC2
+      <a href="/vi/5-secure-the-applications/">
+           <b> 5. </b> Bảo mật ứng dụng
           
             <i class="fas fa-check read-icon"></i>
           
       </a>
       
-      
-        <ul>
-          
-          
-            
-          
-          
-          
-        
-          
-            
-            
-
-
-
-
- 
-  
-    
-    <li data-nav-id="/vi/6-migrate-ec2/6.1-lightsail-snapshot/" title="Export Lightsail snapshot" class="dd-item 
-        
-        
-        
-        ">
-      <a href="/vi/6-migrate-ec2/6.1-lightsail-snapshot/">
-          <b>6.1 </b>Export Lightsail snapshot
-          
-            <i class="fas fa-check read-icon"></i>
-          
-      </a>
-      
-              
-    </li>
-  
- 
-
-            
-          
-            
-            
-
-
-
-
- 
-  
-    
-    <li data-nav-id="/vi/6-migrate-ec2/6.2-ec2-instance/" title="Tạo EC2 Instance" class="dd-item 
-        
-        
-        
-        ">
-      <a href="/vi/6-migrate-ec2/6.2-ec2-instance/">
-          <b>6.2 </b>Tạo EC2 Instance
-          
-            <i class="fas fa-check read-icon"></i>
-          
-      </a>
-      
-              
-    </li>
-  
- 
-
-            
-          
-            
-            
-
-
-
-
- 
-  
-    
-    <li data-nav-id="/vi/6-migrate-ec2/6.3-update-sg/" title="Cập nhật Security group" class="dd-item 
-        
-        
-        
-        ">
-      <a href="/vi/6-migrate-ec2/6.3-update-sg/">
-          <b>6.3 </b>Cập nhật Security group
-          
-            <i class="fas fa-check read-icon"></i>
-          
-      </a>
-      
-              
-    </li>
-  
- 
-
-            
-          
-            
-            
-
-
-
-
- 
-  
-    
-    <li data-nav-id="/vi/6-migrate-ec2/6.4-app-ec2/" title="Kiểm tra ứng dụng " class="dd-item 
-        
-        
-        
-        ">
-      <a href="/vi/6-migrate-ec2/6.4-app-ec2/">
-          <b>6.4 </b>Kiểm tra ứng dụng 
-          
-            <i class="fas fa-check read-icon"></i>
-          
-      </a>
-      
-              
-    </li>
-  
- 
-
-            
-          
-        
-        </ul>
               
     </li>
   
@@ -678,13 +528,91 @@
  
   
     
-    <li data-nav-id="/vi/7-clean-up/" title="Dọn dẹp tài nguyên  " class="dd-item 
+    <li data-nav-id="/vi/6-create-snapshots/" title="Tạo snapshot" class="dd-item 
         
         
         
         ">
-      <a href="/vi/7-clean-up/">
-          <b>7. </b>Dọn dẹp tài nguyên  
+      <a href="/vi/6-create-snapshots/">
+           <b> 6. </b> Tạo snapshot
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+          
+          
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/vi/7-migrate-to-larger-instances/" title="Dịch chuyển sang instance lớn hơn" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/vi/7-migrate-to-larger-instances/">
+           <b> 7. </b> Dịch chuyển sang instance lớn hơn
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+          
+          
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/vi/8-create-alarms/" title="Tạo cảnh báo" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/vi/8-create-alarms/">
+           <b> 8. </b> Tạo cảnh báo
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+          
+          
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/vi/9-clean-up/" title="Dọn dẹp tài nguyên" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/vi/9-clean-up/">
+           <b> 9. </b> Dọn dẹp tài nguyên
           
             <i class="fas fa-check read-icon"></i>
           
@@ -778,7 +706,7 @@
       <left>
     
      <b> Workshop</b> <br>
-    <img src="https://hitwebcounter.com/counter/counter.php?page=7838613&style=0038&nbdigits=9&type=page&initCount=0" title="Migrate" Alt="web counter"   border="0" /></a>  <br>
+    <img src="https://hitwebcounter.com/counter/counter.php?page=7920860&style=0038&nbdigits=9&type=page&initCount=0" title="Migrate" Alt="web counter"   border="0" /></a>  <br>
      <b> <a href="https://cloudjourney.awsstudygroup.com/">Cloud Journey</a></b> <br>
     <img src="https://hitwebcounter.com/counter/counter.php?page=7830807&style=0038&nbdigits=9&type=page&initCount=0" title="Total CLoud Journey" Alt="web counter"   border="0"   />
      
@@ -787,14 +715,13 @@
     <br>
     <br>
         <b> Last Updated </b> <br>
-        <i><font color=orange>07-04-2023</font></i>
+        <i><font color=orange>20-10-2023</font></i>
     </left>
     <left>
         <br>
         <br>
-            <b> Team </b> <br>         
-            <i>
-             <a href="https://www.linkedin.com/in/jotaguy"  style="color:orange">Gia Hưng</a>
+            <b> Team </b> <br>
+            <i> <a href="https://www.linkedin.com/in/jotaguy"  style="color:orange">Gia Hưng </a> <br>
         </i>
         </left>
 
@@ -825,22 +752,15 @@
 </span>
 
  
-<h1 id="amazon-lightsail-workshop---tối-ưu-hóa-chi-phí-trên-aws">Amazon Lightsail Workshop - Tối ưu hóa chi phí trên AWS</h1>
+<h1 id="amazon-lightsail-workshop---cost-optimization-on-aws">AMAZON LIGHTSAIL WORKSHOP - COST OPTIMIZATION ON AWS</h1>
+<p>Trong vòng 60-120 phút tới, buổi học này sẽ hướng dẫn bạn xây dựng 3 ứng dụng trên Lightsail: WordPress, PrestaShop và Akaunting. Để mang đến trải nghiệm đầy đủ, WordPress và Akaunting sẽ được triển khai trên Lightsail OS blueprints, trong khi Prestashop sẽ sử dụng Application Blueprint.</p>
+<p>Sau khi mỗi ứng dụng được triển khai, chúng ta sẽ điều tra cách bảo mật ứng dụng hơn, tạo sao lưu, chuyển sang các loại máy ảo lớn hơn khi doanh nghiệp của bạn phát triển, và tạo cảnh báo để theo dõi hệ thống một cách chủ động.</p>
 <h4 id="tổng-quan">Tổng quan</h4>
-<p>Amazon Lightsail là cách dễ nhất để bắt đầu tiếp cận AWS. Lightsail cung cấp dịch vụ tính toán, lưu trữ và mạng với mức giá cố định thấp. Không dừng lại ở đó, các  Lightsail instance của bạn có thể tận dụng sức mạnh của các dịch vụ còn lại mà AWS cung cấp.</p>
-<p>Triển khai và mở rộng ứng dụng LAMP stack trên Amazon Lightsail</p>
-<p>Trong các bài lab này, bạn sẽ triển khai một ứng dụng LAMP stack có khả năng chịu lỗi và có thể mở rộng. Để bắt đầu chúng ta sẽ sử dụng front-end PHP trong một Lightsail instance duy nhất dựa trên bản thiết kế Bitnami LAMP. Tiếp theo, bạn sẽ triển khai cơ sở dữ liệu được quản lý Lightsail có tính khả dụng cao và chuyển hướng giao diện người dùng của web để sử dụng nó. Sau đó, bạn sẽ sử dụng tính năng ảnh chụp nhanh của Lightsail để scale out cho ứng dụng web PHP và đặt các máy chủ của bạn sau load balancer.</p>
-<p><img src="/images/intro.jpeg?width=40pc" alt="Lightsail"></p>
-<h4 id="nội-dung">Nội dung</h4>
-<ol>
-<li><a href="1-deploy-lab-infra/">Chuẩn bị</a></li>
-<li><a href="2-access-app/">Kiểm tra ứng dụng </a></li>
-<li><a href="3-lightsaildb/">Sử dụng CSDL Lightsail </a></li>
-<li><a href="4-lightsaillb/">Sử dụng Lightsail LB</a></li>
-<li><a href="5-rdsdb/">Sử dụng RDS</a></li>
-<li><a href="6-migrate-ec2/">Dịch chuyển sang EC2</a></li>
-<li><a href="7-clean-up/">Dọn dẹp tài nguyên</a></li>
-</ol>
+<p>Trong bài thực hành này, chúng ta sẽ triển khai một số ứng dụng mã nguồn mở khác nhau trên Amazon Lightsail và cấu hình tài nguyên Lightsail một cách giúp bạn mở rộng ứng dụng khi doanh nghiệp của bạn phát triển, đồng thời bảo vệ các ứng dụng khỏi trạng thái mặc định của chúng. Mỗi bước sẽ bao gồm một số best practices để giúp bạn trở thành một chuyên gia sử dụng Amazon Lightsail.</p>
+<h4 id="các-ứng-dụng-cần-triển-khai">Các ứng dụng cần triển khai</h4>
+<p>Chúng ta sẽ triển khai WordPress như trang blog/website, Prestashop như trang web thương mại điện tử và Akaunting như ứng dụng tài chính. Cả ba ứng dụng này đều là sản phẩm mã nguồn mở mà bạn có thể tự tổ chức. Những bài học trong bài thực hành này cũng áp dụng cho tất cả các ứng dụng khác mà bạn có thể triển khai trên Lightsail.</p>
+<h4 id="chi-phí-của-bài-thực-hành-và-dọn-dẹp">Chi phí của bài thực hành và dọn dẹp</h4>
+<p>Bài thực hành này thuộc loại miễn phí hiện tại nếu bạn chưa sử dụng hết 720 giờ tài nguyên Lightsail của miễn phí. Nếu bạn đã sử dụng hết tài nguyên Lightsail miễn phí, bài thực hành này, với thời gian chạy là 2 giờ, sẽ tốn khoảng 0,085 đô la. Nếu bạn bắt đầu bài thực hành này, ngay cả khi bạn không hoàn thành bài thực hành, bạn cần gỡ bỏ các tài nguyên bạn triển khai để không bị tính phí sau khi tài nguyên miễn phí đã được sử dụng hết.</p>
 	
   
         
@@ -882,104 +802,6 @@
 
                     
                     
-                        
-                    
-                    
-
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
                     
 
                     
@@ -1000,6 +822,22 @@
                     
                     
 
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
                     
                         
             
@@ -1181,6 +1019,9 @@
             
         
                     
+            
+        
+                    
                         
             
             
@@ -1196,6 +1037,51 @@
                     
             
         
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
                     
             
         
@@ -1226,7 +1112,7 @@
 	 
 		
 		
-			<a class="nav nav-next" href="/vi/1-deploy-lab-infra/" title="Chuẩn bị" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+			<a class="nav nav-next" href="/vi/1-database/" title="Triển khai Lightsail Database" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
 		
 	
     </div>
@@ -1236,19 +1122,19 @@
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1680804279"></script>
-    <script src="/js/perfect-scrollbar.min.js?1680804279"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1680804279"></script>
-    <script src="/js/jquery.sticky.js?1680804279"></script>
-    <script src="/js/featherlight.min.js?1680804279"></script>
-    <script src="/js/highlight.pack.js?1680804279"></script>
+    <script src="/js/clipboard.min.js?1697744873"></script>
+    <script src="/js/perfect-scrollbar.min.js?1697744873"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1697744873"></script>
+    <script src="/js/jquery.sticky.js?1697744873"></script>
+    <script src="/js/featherlight.min.js?1697744873"></script>
+    <script src="/js/highlight.pack.js?1697744873"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1680804279"></script>
-    <script src="/js/learn.js?1680804279"></script>
-    <script src="/js/hugo-learn.js?1680804279"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1697744873"></script>
+    <script src="/js/learn.js?1697744873"></script>
+    <script src="/js/hugo-learn.js?1697744873"></script>
 
-    <link href="/mermaid/mermaid.css?1680804279" rel="stylesheet" />
-    <script src="/mermaid/mermaid.js?1680804279"></script>
+    <link href="/mermaid/mermaid.css?1697744873" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1697744873"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>
