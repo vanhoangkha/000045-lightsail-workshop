@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="generator" content="Hugo 0.99.1" />
+    <meta name="generator" content="Hugo 0.133.0">
     <meta name="description" content="">
 <meta name="author" content="journeyoftheaverageguy@gmail.com">
 
@@ -12,21 +12,21 @@
     <title>Triển khai Lightsail Database :: Bắt đầu với Amazon VPC và AWS VPN Site to Site</title>
 
     
-    <link href="/css/nucleus.css?1701073854" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1701073854" rel="stylesheet">
-    <link href="/css/hybrid.css?1701073854" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1701073854" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1701073854" rel="stylesheet">
-    <link href="/css/auto-complete.css?1701073854" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1701073854" rel="stylesheet">
-    <link href="/css/theme.css?1701073854" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1701073854" rel="stylesheet">
+    <link href="/css/nucleus.css?1733801935" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1733801935" rel="stylesheet">
+    <link href="/css/hybrid.css?1733801935" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1733801935" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1733801935" rel="stylesheet">
+    <link href="/css/auto-complete.css?1733801935" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1733801935" rel="stylesheet">
+    <link href="/css/theme.css?1733801935" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1733801935" rel="stylesheet">
     
-    <link href="/css/theme-workshop.css?1701073854" rel="stylesheet">
+    <link href="/css/theme-workshop.css?1733801935" rel="stylesheet">
     
     
 
-    <script src="/js/jquery-3.3.1.min.js?1701073854"></script>
+    <script src="/js/jquery-3.3.1.min.js?1733801935"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -57,14 +57,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1701073854"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1701073854"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1733801935"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1733801935"></script>
 <script type="text/javascript">
     
-        var baseurl = "\/vi";
+        var baseurl = "\/\/vi";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1701073854"></script>
+<script type="text/javascript" src="/js/search.js?1733801935"></script>
 
     
   </div>
@@ -83,7 +83,7 @@
   
     
     <li data-nav-id="/vi/1-database/" title="Triển khai Lightsail Database" class="dd-item 
-        parent
+        
         active
         
         ">
@@ -715,7 +715,7 @@
     <br>
     <br>
         <b> Last Updated </b> <br>
-        <i><font color=orange>27-11-2023</font></i>
+        <i><font color=orange>10-12-2024</font></i>
     </left>
     <left>
         <br>
@@ -821,7 +821,7 @@
 <ol>
 <li>Dành một ít thời gian để làm quen với giao diện điều khiển Lightsail. Khi bạn sẵn sàng, hãy nhấp vào tab <strong>Databases</strong>, sau đó nhấp vào <strong>Create database</strong>.</li>
 </ol>
-<p><img src="/images/1/0001.png?featherlight=false&amp;width=90pc" alt="Create VPC"></p>
+<p><img alt="Create VPC" src="/images/1/0001.png?featherlight=false&width=90pc"></p>
 <ol start="2">
 <li>
 <p>Chúng ta sẽ sử dụng phiên bản MySQL mặc định. Cuộn xuống và nhấp vào <strong>Specify login credentials</strong>.</p>
@@ -838,11 +838,11 @@
 </ul>
 </li>
 </ol>
-<p><img src="/images/1/0003.png?featherlight=false&amp;width=90pc" alt="Create VPC"></p>
+<p><img alt="Create VPC" src="/images/1/0003.png?featherlight=false&width=90pc"></p>
 <ol start="3">
 <li>Chọn database plan.</li>
 </ol>
-<p><img src="/images/1/0004.png?featherlight=false&amp;width=90pc" alt="Create VPC"></p>
+<p><img alt="Create VPC" src="/images/1/0004.png?featherlight=false&width=90pc"></p>
 <ol start="4">
 <li>
 <p>Chúng ta sẽ lựa chọn một kế hoạch cơ sở dữ liệu <strong>STANDARD</strong> để tiết kiệm thời gian và tiền bạc. Nếu bạn muốn sử dụng cơ sở dữ liệu &lsquo;High-Availability&rsquo;, nó sẽ tự động chuyển đổi trong trường hợp có sự cố xảy ra với cơ sở dữ liệu chính.</p>
@@ -863,25 +863,25 @@
 </ol>
 <pre tabindex="0"><code>Key = dbname
 Value = dbWordPress
-</code></pre><p><img src="/images/1/0005.png?featherlight=false&amp;width=90pc" alt="Create VPC"></p>
+</code></pre><p><img alt="Create VPC" src="/images/1/0005.png?featherlight=false&width=90pc"></p>
 <ol start="7">
 <li>Chọn <strong>Create database</strong></li>
 </ol>
-<p><img src="/images/1/0006.png?featherlight=false&amp;width=90pc" alt="Create VPC"></p>
+<p><img alt="Create VPC" src="/images/1/0006.png?featherlight=false&width=90pc"></p>
 <ol start="8">
 <li>Sẽ mất khoảng 15 phút để tạo cơ sở dữ liệu.</li>
 </ol>
 <ul>
 <li>Trong thời gian chúng ta đợi cơ sở dữ liệu được khởi tạo, chúng ta sẽ tiến hành bước tiếp theo &lsquo;Triển khai một phiên bản WordPress&rsquo;</li>
 </ul>
-<p><img src="/images/1/0007.png?featherlight=false&amp;width=90pc" alt="Create VPC"></p>
-<p><img src="/images/1/00010.png?featherlight=false&amp;width=90pc" alt="Create VPC"></p>
+<p><img alt="Create VPC" src="/images/1/0007.png?featherlight=false&width=90pc"></p>
+<p><img alt="Create VPC" src="/images/1/00010.png?featherlight=false&width=90pc"></p>
 <ol start="9">
 <li>Nhấp chuột phải vào Instances và chọn &lsquo;Open in a new tab&rsquo; vì chúng ta sẽ cần quay lại trang này sau để lấy database instance Endpoint URL.</li>
 </ol>
-<p><img src="/images/1/00011.png?featherlight=false&amp;width=90pc" alt="Create VPC"></p>
+<p><img alt="Create VPC" src="/images/1/00011.png?featherlight=false&width=90pc"></p>
 <p>Chúng ta đã thực hiện bước đầu tiên trong việc tạo một cơ sở dữ liệu từ xa để tất cả các ứng dụng của chúng ta có thể sử dụng. Nếu xảy ra sự cố với phiên bản cơ sở dữ liệu chính, sẽ có một phiên bản thứ hai đang chạy (ẩn đi với bạn), sẽ tiếp quản nếu cần thiết, đảm bảo tính sẵn sàng cao hơn cho hồ sơ cơ sở dữ liệu.</p>
-<p><img src="/images/1/00013.png?featherlight=false&amp;width=90pc" alt="Create VPC"></p>
+<p><img alt="Create VPC" src="/images/1/00013.png?featherlight=false&width=90pc"></p>
 
 
 
@@ -1253,19 +1253,19 @@ Value = dbWordPress
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1701073854"></script>
-    <script src="/js/perfect-scrollbar.min.js?1701073854"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1701073854"></script>
-    <script src="/js/jquery.sticky.js?1701073854"></script>
-    <script src="/js/featherlight.min.js?1701073854"></script>
-    <script src="/js/highlight.pack.js?1701073854"></script>
+    <script src="/js/clipboard.min.js?1733801935"></script>
+    <script src="/js/perfect-scrollbar.min.js?1733801935"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1733801935"></script>
+    <script src="/js/jquery.sticky.js?1733801935"></script>
+    <script src="/js/featherlight.min.js?1733801935"></script>
+    <script src="/js/highlight.pack.js?1733801935"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1701073854"></script>
-    <script src="/js/learn.js?1701073854"></script>
-    <script src="/js/hugo-learn.js?1701073854"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1733801935"></script>
+    <script src="/js/learn.js?1733801935"></script>
+    <script src="/js/hugo-learn.js?1733801935"></script>
 
-    <link href="/mermaid/mermaid.css?1701073854" rel="stylesheet" />
-    <script src="/mermaid/mermaid.js?1701073854"></script>
+    <link href="/mermaid/mermaid.css?1733801935" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1733801935"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="generator" content="Hugo 0.99.1" />
+    <meta name="generator" content="Hugo 0.133.0">
     <meta name="description" content="">
 <meta name="author" content="journeyoftheaverageguy@gmail.com">
 
@@ -12,21 +12,21 @@
     <title>Create Alarm :: Start with Amazon VPC and AWS VPN Site-to-Site.</title>
 
     
-    <link href="/css/nucleus.css?1701073854" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1701073854" rel="stylesheet">
-    <link href="/css/hybrid.css?1701073854" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1701073854" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1701073854" rel="stylesheet">
-    <link href="/css/auto-complete.css?1701073854" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1701073854" rel="stylesheet">
-    <link href="/css/theme.css?1701073854" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1701073854" rel="stylesheet">
+    <link href="/css/nucleus.css?1733801934" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1733801934" rel="stylesheet">
+    <link href="/css/hybrid.css?1733801934" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1733801934" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1733801934" rel="stylesheet">
+    <link href="/css/auto-complete.css?1733801934" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1733801934" rel="stylesheet">
+    <link href="/css/theme.css?1733801934" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1733801934" rel="stylesheet">
     
-    <link href="/css/theme-workshop.css?1701073854" rel="stylesheet">
+    <link href="/css/theme-workshop.css?1733801934" rel="stylesheet">
     
     
 
-    <script src="/js/jquery-3.3.1.min.js?1701073854"></script>
+    <script src="/js/jquery-3.3.1.min.js?1733801934"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -57,14 +57,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1701073854"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1701073854"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1733801934"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1733801934"></script>
 <script type="text/javascript">
     
-        var baseurl = "";
+        var baseurl = "\/";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1701073854"></script>
+<script type="text/javascript" src="/js/search.js?1733801934"></script>
 
     
   </div>
@@ -581,7 +581,7 @@
   
     
     <li data-nav-id="/8-create-alarms/" title="Create Alarm" class="dd-item 
-        parent
+        
         active
         
         ">
@@ -715,7 +715,7 @@
     <br>
     <br>
         <b> Last Updated </b> <br>
-        <i><font color=orange>27-11-2023</font></i>
+        <i><font color=orange>10-12-2024</font></i>
     </left>
     <left>
         <br>
@@ -815,35 +815,35 @@
 <li>Under &lsquo;Metric graphs&rsquo;, click on the CPU overview button.</li>
 <li>Here are all the metrics that customers can see for the version. These metrics are evaluated every 5 minutes.</li>
 </ul>
-<p><img src="/images/5/0009.png?featherlight=false&amp;width=90pc" alt="Create VPC"></p>
+<p><img alt="Create VPC" src="/images/5/0009.png?featherlight=false&width=90pc"></p>
 <ol start="2">
 <li>Select <strong>CPU burst capacity (percentage)</strong>.</li>
 </ol>
-<p><img src="/images/5/00010.png?featherlight=false&amp;width=90pc" alt="Create VPC"></p>
+<p><img alt="Create VPC" src="/images/5/00010.png?featherlight=false&width=90pc"></p>
 <ol start="3">
 <li>Choose <strong>Add alarm</strong>.</li>
 <li>We will create two alarms. One when the burst capacity is below 50% and another when it&rsquo;s below 25%.</li>
 </ol>
-<p><img src="/images/5/00011.png?featherlight=false&amp;width=90pc" alt="Create VPC"></p>
+<p><img alt="Create VPC" src="/images/5/00011.png?featherlight=false&width=90pc"></p>
 <ol start="5">
 <li>In this case, you need to keep the option at &ldquo;not greater than or equal to&rdquo; and adjust the input value down to 50%. At the same time, you need to maintain the threshold for 2 occurrences in the last 10 minutes.</li>
 </ol>
-<p><img src="/images/5/00012.png?featherlight=false&amp;width=90pc" alt="Create VPC"></p>
+<p><img alt="Create VPC" src="/images/5/00012.png?featherlight=false&width=90pc"></p>
 <ol start="6">
 <li>Choose to receive notifications via Email.</li>
 </ol>
 <ul>
 <li>When prompted, click on <strong>Add contact</strong>.</li>
 </ul>
-<p><img src="/images/5/00013.png?featherlight=false&amp;width=90pc" alt="Create VPC"></p>
+<p><img alt="Create VPC" src="/images/5/00013.png?featherlight=false&width=90pc"></p>
 <ol start="7">
 <li>Enter a valid email address and click on <strong>Add contact</strong>.</li>
 </ol>
-<p><img src="/images/5/00014.png?featherlight=false&amp;width=90pc" alt="Create VPC"></p>
+<p><img alt="Create VPC" src="/images/5/00014.png?featherlight=false&width=90pc"></p>
 <ol start="8">
 <li>You will need to verify your email address. In this workshop, we won&rsquo;t send any alert notifications. However, if you set up alerts correctly, you will need to verify your email address within 24 hours.</li>
 </ol>
-<p><img src="/images/5/00015.png?featherlight=false&amp;width=90pc" alt="Create VPC"></p>
+<p><img alt="Create VPC" src="/images/5/00015.png?featherlight=false&width=90pc"></p>
 <ol start="9">
 <li>Click <strong>I understand</strong>.</li>
 </ol>
@@ -855,22 +855,22 @@
 <p>Click <strong>Create</strong>.</p>
 </li>
 </ul>
-<p><img src="/images/5/00016.png?featherlight=false&amp;width=90pc" alt="Create VPC"></p>
+<p><img alt="Create VPC" src="/images/5/00016.png?featherlight=false&width=90pc"></p>
 <ol start="10">
 <li>Now you will see a new alert has been created. Click on &ldquo;Add alarm&rdquo; again, and we will create a second alert.</li>
 </ol>
-<p><img src="/images/5/00017.png?featherlight=false&amp;width=90pc" alt="Create VPC"></p>
+<p><img alt="Create VPC" src="/images/5/00017.png?featherlight=false&width=90pc"></p>
 <ol start="11">
 <li>In this workshop, we will keep all the default settings. Choose &ldquo;Send me a notification when the alarm state changes to OK&rdquo; to receive a notification when the alert state changes to OK.</li>
 </ol>
 <ul>
 <li>Click the &ldquo;Create&rdquo; button to complete the process.</li>
 </ul>
-<p><img src="/images/5/00018.png?featherlight=false&amp;width=90pc" alt="Create VPC"></p>
+<p><img alt="Create VPC" src="/images/5/00018.png?featherlight=false&width=90pc"></p>
 <ol start="12">
 <li>If you scroll up on the graph, you will see two lines, each representing one of the two alerts, to display their activation thresholds.</li>
 </ol>
-<p><img src="/images/5/00019.png?featherlight=false&amp;width=90pc" alt="Create VPC"></p>
+<p><img alt="Create VPC" src="/images/5/00019.png?featherlight=false&width=90pc"></p>
 <p>&ldquo;You can use these previous steps to set up additional alarms for any versions we have deployed. Identifying issues before they impact your users is a crucial part of your business&rsquo;s continuous operation.&rdquo;</p>
 
 
@@ -1246,19 +1246,19 @@
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1701073854"></script>
-    <script src="/js/perfect-scrollbar.min.js?1701073854"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1701073854"></script>
-    <script src="/js/jquery.sticky.js?1701073854"></script>
-    <script src="/js/featherlight.min.js?1701073854"></script>
-    <script src="/js/highlight.pack.js?1701073854"></script>
+    <script src="/js/clipboard.min.js?1733801934"></script>
+    <script src="/js/perfect-scrollbar.min.js?1733801934"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1733801934"></script>
+    <script src="/js/jquery.sticky.js?1733801934"></script>
+    <script src="/js/featherlight.min.js?1733801934"></script>
+    <script src="/js/highlight.pack.js?1733801934"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1701073854"></script>
-    <script src="/js/learn.js?1701073854"></script>
-    <script src="/js/hugo-learn.js?1701073854"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1733801934"></script>
+    <script src="/js/learn.js?1733801934"></script>
+    <script src="/js/hugo-learn.js?1733801934"></script>
 
-    <link href="/mermaid/mermaid.css?1701073854" rel="stylesheet" />
-    <script src="/mermaid/mermaid.js?1701073854"></script>
+    <link href="/mermaid/mermaid.css?1733801934" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1733801934"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

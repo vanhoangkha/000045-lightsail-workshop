@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="generator" content="Hugo 0.99.1" />
+    <meta name="generator" content="Hugo 0.133.0">
     <meta name="description" content="">
 <meta name="author" content="journeyoftheaverageguy@gmail.com">
 
@@ -12,21 +12,21 @@
     <title>Triển khai Wordpress :: Bắt đầu với Amazon VPC và AWS VPN Site to Site</title>
 
     
-    <link href="/css/nucleus.css?1701073854" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1701073854" rel="stylesheet">
-    <link href="/css/hybrid.css?1701073854" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1701073854" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1701073854" rel="stylesheet">
-    <link href="/css/auto-complete.css?1701073854" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1701073854" rel="stylesheet">
-    <link href="/css/theme.css?1701073854" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1701073854" rel="stylesheet">
+    <link href="/css/nucleus.css?1733801935" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1733801935" rel="stylesheet">
+    <link href="/css/hybrid.css?1733801935" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1733801935" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1733801935" rel="stylesheet">
+    <link href="/css/auto-complete.css?1733801935" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1733801935" rel="stylesheet">
+    <link href="/css/theme.css?1733801935" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1733801935" rel="stylesheet">
     
-    <link href="/css/theme-workshop.css?1701073854" rel="stylesheet">
+    <link href="/css/theme-workshop.css?1733801935" rel="stylesheet">
     
     
 
-    <script src="/js/jquery-3.3.1.min.js?1701073854"></script>
+    <script src="/js/jquery-3.3.1.min.js?1733801935"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -57,14 +57,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1701073854"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1701073854"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1733801935"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1733801935"></script>
 <script type="text/javascript">
     
-        var baseurl = "\/vi";
+        var baseurl = "\/\/vi";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1701073854"></script>
+<script type="text/javascript" src="/js/search.js?1733801935"></script>
 
     
   </div>
@@ -346,7 +346,7 @@
   
     
     <li data-nav-id="/vi/3-e-commerce-instance/3.3-configure/" title="Triển khai Wordpress" class="dd-item 
-        parent
+        
         active
         
         ">
@@ -715,7 +715,7 @@
     <br>
     <br>
         <b> Last Updated </b> <br>
-        <i><font color=orange>27-11-2023</font></i>
+        <i><font color=orange>10-12-2024</font></i>
     </left>
     <left>
         <br>
@@ -805,7 +805,7 @@
 	<ol>
 <li>Hãy nhấp vào tên instance là Workshop-PrestaShop, sau đó nhấn vào Connect bằng SSH để đăng nhập vào instance.</li>
 </ol>
-<p><img src="/images/2/0008.png?featherlight=false&amp;width=90pc" alt="Create VPC"></p>
+<p><img alt="Create VPC" src="/images/2/0008.png?featherlight=false&width=90pc"></p>
 <ol start="2">
 <li>Việc này đòi hỏi bạn cần nhập lệnh sau vào terminal:</li>
 </ol>
@@ -819,12 +819,12 @@
 <ul>
 <li>Trong cửa sổ điều khiển SSH, hãy gõ &lsquo;cat ~/bitnami_credentials&rsquo; và nhấn Enter.</li>
 </ul>
-<p><img src="/images/2/0009.png?featherlight=false&amp;width=90pc" alt="Create VPC"></p>
+<p><img alt="Create VPC" src="/images/2/0009.png?featherlight=false&width=90pc"></p>
 <ol start="4">
 <li>&ldquo;Điều này sẽ trả về một tên người dùng và mật khẩu mặc định. Tên người dùng mặc định sẽ là &lsquo;<a href="mailto:user@example.com">user@example.com</a>&rsquo; và mật khẩu sẽ là một chuỗi ngẫu nhiên. Hãy ghi lại mật khẩu của bạn.</li>
 </ol>
 <p>Trong trình duyệt web của bạn, nhập &lsquo;http://địa_chỉ_ip_cố_định_của_bạn/administration&rsquo; và nhập tên người dùng và mật khẩu từ bước trước.&rdquo;</p>
-<p><img src="/images/2/00010.png?featherlight=false&amp;width=90pc" alt="Create VPC"></p>
+<p><img alt="Create VPC" src="/images/2/00010.png?featherlight=false&width=90pc"></p>
 <ol start="5">
 <li>Chúng tôi sẽ thay đổi tên người dùng và mật khẩu mặc định thành thông tin đăng nhập mà bạn sẽ nhớ được.</li>
 </ol>
@@ -836,13 +836,13 @@
 <p>Dưới phần &ldquo;Employees&rdquo;, nhấp vào biểu tượng &ldquo;Bút chì&rdquo; bên phải của Người dùng Bitnami.</p>
 </li>
 </ul>
-<p><img src="/images/2/00011.png?featherlight=false&amp;width=90pc" alt="Create VPC"></p>
+<p><img alt="Create VPC" src="/images/2/00011.png?featherlight=false&width=90pc"></p>
 <ol start="6">
 <li>Hãy cập nhật các giá trị ở đây với tên của bạn, họ của bạn và địa chỉ email của bạn, sau đó nhấn &ldquo;Đổi mật khẩu&rdquo; (cập nhật mật khẩu), và sau đó nhấn &ldquo;Lưu&rdquo;.</li>
 </ol>
 <p>LƯU Ý: Nếu đây là một trang web thương mại điện tử thực sự, chúng ta sẽ cấu hình tên miền (hoặc tên miền con) để trỏ đến địa chỉ IP tĩnh của trang web này, tạo chứng chỉ SSL cho HTTPS và bật HTTPS trong PrestaShop. Tuy nhiên, chúng ta sẽ bỏ qua những bước này vì đây là một buổi làm việc thực hành và hiện tại chúng ta không có tên miền để sử dụng.</p>
 <p>Trong phần đầu của trang quản trị, bấm chuột phải vào &ldquo;Xem cửa hàng của tôi&rdquo; và mở trong tab mới. Đây là giao diện cửa hàng mặc định của bạn.</p>
-<p><img src="/images/2/00012.png?featherlight=false&amp;width=90pc" alt="Create VPC"></p>
+<p><img alt="Create VPC" src="/images/2/00012.png?featherlight=false&width=90pc"></p>
 
 
 
@@ -1221,19 +1221,19 @@
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1701073854"></script>
-    <script src="/js/perfect-scrollbar.min.js?1701073854"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1701073854"></script>
-    <script src="/js/jquery.sticky.js?1701073854"></script>
-    <script src="/js/featherlight.min.js?1701073854"></script>
-    <script src="/js/highlight.pack.js?1701073854"></script>
+    <script src="/js/clipboard.min.js?1733801935"></script>
+    <script src="/js/perfect-scrollbar.min.js?1733801935"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1733801935"></script>
+    <script src="/js/jquery.sticky.js?1733801935"></script>
+    <script src="/js/featherlight.min.js?1733801935"></script>
+    <script src="/js/highlight.pack.js?1733801935"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1701073854"></script>
-    <script src="/js/learn.js?1701073854"></script>
-    <script src="/js/hugo-learn.js?1701073854"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1733801935"></script>
+    <script src="/js/learn.js?1733801935"></script>
+    <script src="/js/hugo-learn.js?1733801935"></script>
 
-    <link href="/mermaid/mermaid.css?1701073854" rel="stylesheet" />
-    <script src="/mermaid/mermaid.js?1701073854"></script>
+    <link href="/mermaid/mermaid.css?1733801935" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1733801935"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

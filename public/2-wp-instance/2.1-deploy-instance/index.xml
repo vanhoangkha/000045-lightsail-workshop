@@ -4,6 +4,8 @@
     <title>Deploying a WordPress Instance on Start with Amazon VPC and AWS VPN Site-to-Site.</title>
     <link>/2-wp-instance/2.1-deploy-instance/</link>
     <description>Recent content in Deploying a WordPress Instance on Start with Amazon VPC and AWS VPN Site-to-Site.</description>
-    <generator>Hugo -- gohugo.io</generator><atom:link href="/2-wp-instance/2.1-deploy-instance/index.xml" rel="self" type="application/rss+xml" />
+    <generator>Hugo</generator>
+    <language>en</language>
+    <atom:link href="/2-wp-instance/2.1-deploy-instance/index.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>

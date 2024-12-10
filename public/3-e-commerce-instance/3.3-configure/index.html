@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="generator" content="Hugo 0.99.1" />
+    <meta name="generator" content="Hugo 0.133.0">
     <meta name="description" content="">
 <meta name="author" content="journeyoftheaverageguy@gmail.com">
 
@@ -12,21 +12,21 @@
     <title>Deploying WordPress :: Start with Amazon VPC and AWS VPN Site-to-Site.</title>
 
     
-    <link href="/css/nucleus.css?1701073854" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1701073854" rel="stylesheet">
-    <link href="/css/hybrid.css?1701073854" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1701073854" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1701073854" rel="stylesheet">
-    <link href="/css/auto-complete.css?1701073854" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1701073854" rel="stylesheet">
-    <link href="/css/theme.css?1701073854" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1701073854" rel="stylesheet">
+    <link href="/css/nucleus.css?1733801934" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1733801934" rel="stylesheet">
+    <link href="/css/hybrid.css?1733801934" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1733801934" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1733801934" rel="stylesheet">
+    <link href="/css/auto-complete.css?1733801934" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1733801934" rel="stylesheet">
+    <link href="/css/theme.css?1733801934" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1733801934" rel="stylesheet">
     
-    <link href="/css/theme-workshop.css?1701073854" rel="stylesheet">
+    <link href="/css/theme-workshop.css?1733801934" rel="stylesheet">
     
     
 
-    <script src="/js/jquery-3.3.1.min.js?1701073854"></script>
+    <script src="/js/jquery-3.3.1.min.js?1733801934"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -57,14 +57,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1701073854"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1701073854"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1733801934"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1733801934"></script>
 <script type="text/javascript">
     
-        var baseurl = "";
+        var baseurl = "\/";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1701073854"></script>
+<script type="text/javascript" src="/js/search.js?1733801934"></script>
 
     
   </div>
@@ -346,7 +346,7 @@
   
     
     <li data-nav-id="/3-e-commerce-instance/3.3-configure/" title="Deploying WordPress" class="dd-item 
-        parent
+        
         active
         
         ">
@@ -715,7 +715,7 @@
     <br>
     <br>
         <b> Last Updated </b> <br>
-        <i><font color=orange>27-11-2023</font></i>
+        <i><font color=orange>10-12-2024</font></i>
     </left>
     <left>
         <br>
@@ -805,7 +805,7 @@
 	<ol>
 <li>Click on the instance named Workshop-PrestaShop, then click on Connect via SSH to log in to the instance.</li>
 </ol>
-<p><img src="/images/2/0008.png?featherlight=false&amp;width=90pc" alt="Create VPC"></p>
+<p><img alt="Create VPC" src="/images/2/0008.png?featherlight=false&width=90pc"></p>
 <ol start="2">
 <li>This requires you to enter the following command in the terminal:</li>
 </ol>
@@ -819,12 +819,12 @@
 <ul>
 <li>In the SSH console window, type &lsquo;cat ~/bitnami_credentials&rsquo; and press Enter.</li>
 </ul>
-<p><img src="/images/2/0009.png?featherlight=false&amp;width=90pc" alt="Create VPC"></p>
+<p><img alt="Create VPC" src="/images/2/0009.png?featherlight=false&width=90pc"></p>
 <ol start="4">
 <li>This will return a default username and password. The default username will be &lsquo;<a href="mailto:user@example.com">user@example.com</a>&rsquo;, and the password will be a random string. Make a note of your password.</li>
 </ol>
 <p>In your web browser, enter &lsquo;http://your_static_IP_address/administration&rsquo; and use the username and password from the previous step.</p>
-<p><img src="/images/2/00010.png?featherlight=false&amp;width=90pc" alt="Create VPC"></p>
+<p><img alt="Create VPC" src="/images/2/00010.png?featherlight=false&width=90pc"></p>
 <ol start="5">
 <li>We will change the default username and password to login information that you will remember.</li>
 </ol>
@@ -836,13 +836,13 @@
 <p>Under the &ldquo;Employees&rdquo; section, click on the pencil icon to the right of the Bitnami User.</p>
 </li>
 </ul>
-<p><img src="/images/2/00011.png?featherlight=false&amp;width=90pc" alt="Create VPC"></p>
+<p><img alt="Create VPC" src="/images/2/00011.png?featherlight=false&width=90pc"></p>
 <ol start="6">
 <li>Update the values here with your name, your last name, and your email address, then click &ldquo;Change Password&rdquo; and then &ldquo;Save.&rdquo;</li>
 </ol>
 <p>NOTE: If this were a real e-commerce website, we would configure a domain (or subdomain) to point to the static IP address of this website, create an SSL certificate for HTTPS, and enable HTTPS in PrestaShop. However, we will skip these steps as this is a practical session, and we currently don&rsquo;t have a domain to use.</p>
 <p>In the top part of the admin page, right-click on &ldquo;View My Shop&rdquo; and open it in a new tab. This is your default store interface.</p>
-<p><img src="/images/2/00012.png?featherlight=false&amp;width=90pc" alt="Create VPC"></p>
+<p><img alt="Create VPC" src="/images/2/00012.png?featherlight=false&width=90pc"></p>
 
 
 
@@ -1221,19 +1221,19 @@
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1701073854"></script>
-    <script src="/js/perfect-scrollbar.min.js?1701073854"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1701073854"></script>
-    <script src="/js/jquery.sticky.js?1701073854"></script>
-    <script src="/js/featherlight.min.js?1701073854"></script>
-    <script src="/js/highlight.pack.js?1701073854"></script>
+    <script src="/js/clipboard.min.js?1733801934"></script>
+    <script src="/js/perfect-scrollbar.min.js?1733801934"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1733801934"></script>
+    <script src="/js/jquery.sticky.js?1733801934"></script>
+    <script src="/js/featherlight.min.js?1733801934"></script>
+    <script src="/js/highlight.pack.js?1733801934"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1701073854"></script>
-    <script src="/js/learn.js?1701073854"></script>
-    <script src="/js/hugo-learn.js?1701073854"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1733801934"></script>
+    <script src="/js/learn.js?1733801934"></script>
+    <script src="/js/hugo-learn.js?1733801934"></script>
 
-    <link href="/mermaid/mermaid.css?1701073854" rel="stylesheet" />
-    <script src="/mermaid/mermaid.js?1701073854"></script>
+    <link href="/mermaid/mermaid.css?1733801934" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1733801934"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

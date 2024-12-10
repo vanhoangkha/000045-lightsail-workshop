@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="generator" content="Hugo 0.99.1" />
+    <meta name="generator" content="Hugo 0.133.0">
     <meta name="description" content="">
 <meta name="author" content="journeyoftheaverageguy@gmail.com">
 
@@ -12,21 +12,21 @@
     <title>Application Security :: Start with Amazon VPC and AWS VPN Site-to-Site.</title>
 
     
-    <link href="/css/nucleus.css?1701073854" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1701073854" rel="stylesheet">
-    <link href="/css/hybrid.css?1701073854" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1701073854" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1701073854" rel="stylesheet">
-    <link href="/css/auto-complete.css?1701073854" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1701073854" rel="stylesheet">
-    <link href="/css/theme.css?1701073854" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1701073854" rel="stylesheet">
+    <link href="/css/nucleus.css?1733801934" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1733801934" rel="stylesheet">
+    <link href="/css/hybrid.css?1733801934" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1733801934" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1733801934" rel="stylesheet">
+    <link href="/css/auto-complete.css?1733801934" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1733801934" rel="stylesheet">
+    <link href="/css/theme.css?1733801934" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1733801934" rel="stylesheet">
     
-    <link href="/css/theme-workshop.css?1701073854" rel="stylesheet">
+    <link href="/css/theme-workshop.css?1733801934" rel="stylesheet">
     
     
 
-    <script src="/js/jquery-3.3.1.min.js?1701073854"></script>
+    <script src="/js/jquery-3.3.1.min.js?1733801934"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -57,14 +57,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1701073854"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1701073854"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1733801934"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1733801934"></script>
 <script type="text/javascript">
     
-        var baseurl = "";
+        var baseurl = "\/";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1701073854"></script>
+<script type="text/javascript" src="/js/search.js?1733801934"></script>
 
     
   </div>
@@ -503,7 +503,7 @@
   
     
     <li data-nav-id="/5-secure-the-applications/" title="Application Security" class="dd-item 
-        parent
+        
         active
         
         ">
@@ -715,7 +715,7 @@
     <br>
     <br>
         <b> Last Updated </b> <br>
-        <i><font color=orange>27-11-2023</font></i>
+        <i><font color=orange>10-12-2024</font></i>
     </left>
     <left>
         <br>
@@ -816,11 +816,11 @@
 <p>Click on <strong>Networking</strong>.</p>
 </li>
 </ul>
-<p><img src="/images/4/0001.png?featherlight=false&amp;width=90pc" alt="Create VPC"></p>
+<p><img alt="Create VPC" src="/images/4/0001.png?featherlight=false&width=90pc"></p>
 </li>
 <li>
 <p>Scroll down to the &lsquo;IPv4 Firewall&rsquo; section and click on the &lsquo;Modify&rsquo; icon next to &lsquo;SSH.&rsquo;</p>
-<p><img src="/images/4/0002.png?featherlight=false&amp;width=10pc" alt="Create VPC"></p>
+<p><img alt="Create VPC" src="/images/4/0002.png?featherlight=false&width=10pc"></p>
 </li>
 <li>
 <p>Here, you can restrict access to Port 22 in several ways:</p>
@@ -829,7 +829,7 @@
 <li>[Better] Restrict access only from specific IP addresses, allowing access to the port from specific IP addresses (e.g., home, office).</li>
 <li>[Best] We can remove all access to Port 22 (click Cancel and then the trash can icon).</li>
 </ul>
-<p><img src="/images/4/0003.png?featherlight=false&amp;width=90pc" alt="Create VPC"></p>
+<p><img alt="Create VPC" src="/images/4/0003.png?featherlight=false&width=90pc"></p>
 </li>
 <li>
 <p>Since we no longer need to log in to our instance, we will remove all access to Port 22.</p>
@@ -838,7 +838,7 @@
 <li>Click on the <strong>Trashcan</strong> icon next to SSH.</li>
 <li>Scroll down to the <strong>IPv6 firewall</strong> section.</li>
 </ul>
-<p><img src="/images/4/0004.png?featherlight=false&amp;width=90pc" alt="Create VPC"></p>
+<p><img alt="Create VPC" src="/images/4/0004.png?featherlight=false&width=90pc"></p>
 </li>
 <li>
 <p>Repeat the above steps.</p>
@@ -846,7 +846,7 @@
 <li>Scroll back to the top of the page and click on the <strong>Connect</strong> tab.</li>
 <li>You&rsquo;ll see that SSH Browser is now disabled (along with any other SSH).</li>
 </ul>
-<p><img src="/images/4/0005.png?featherlight=false&amp;width=90pc" alt="Create VPC"></p>
+<p><img alt="Create VPC" src="/images/4/0005.png?featherlight=false&width=90pc"></p>
 </li>
 <li>
 <p>We will repeat similar steps for PrestaShop and Akaunting.</p>
@@ -855,7 +855,7 @@
 <li>Note: In a real-world environment, we would enable SSL certificates (HTTPS) and redirect all traffic to HTTPS. We would also enable HTTPS (TCP 443) on each instance to allow connections through that port.</li>
 <li>Click <strong>Next</strong> in this guide after SSH has been disabled for both IPv4 and IPv6 on all three instances.</li>
 </ul>
-<p><img src="/images/4/0006.png?featherlight=false&amp;width=90pc" alt="Create VPC"></p>
+<p><img alt="Create VPC" src="/images/4/0006.png?featherlight=false&width=90pc"></p>
 </li>
 </ol>
 
@@ -1232,19 +1232,19 @@
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1701073854"></script>
-    <script src="/js/perfect-scrollbar.min.js?1701073854"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1701073854"></script>
-    <script src="/js/jquery.sticky.js?1701073854"></script>
-    <script src="/js/featherlight.min.js?1701073854"></script>
-    <script src="/js/highlight.pack.js?1701073854"></script>
+    <script src="/js/clipboard.min.js?1733801934"></script>
+    <script src="/js/perfect-scrollbar.min.js?1733801934"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1733801934"></script>
+    <script src="/js/jquery.sticky.js?1733801934"></script>
+    <script src="/js/featherlight.min.js?1733801934"></script>
+    <script src="/js/highlight.pack.js?1733801934"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1701073854"></script>
-    <script src="/js/learn.js?1701073854"></script>
-    <script src="/js/hugo-learn.js?1701073854"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1733801934"></script>
+    <script src="/js/learn.js?1733801934"></script>
+    <script src="/js/hugo-learn.js?1733801934"></script>
 
-    <link href="/mermaid/mermaid.css?1701073854" rel="stylesheet" />
-    <script src="/mermaid/mermaid.js?1701073854"></script>
+    <link href="/mermaid/mermaid.css?1733801934" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1733801934"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>
