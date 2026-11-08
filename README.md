@@ -1,4 +1,4 @@
-# 💡 Lightsail Workshop
+# Lightsail Workshop
 
 Deploy applications quickly with Amazon Lightsail.
 
@@ -8,7 +8,7 @@ This is a hands-on workshop from the **AWS First Cloud Journey** series, designe
 
 ## Workshop
 
-📖 **[Start the workshop](https://vanhoangkha.github.io/000045-lightsail-workshop/)**
+**[Start the workshop](https://vanhoangkha.github.io/000045-lightsail-workshop/)**
 
 ## Prerequisites
 
